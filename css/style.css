@@ -31,9 +31,9 @@ body {
      @-Webkit-keyframes fadeInDown {
 0% {
     opacity: 0;
-    -webkit-transform: translateY(-40px);
-    -moz-transform: translateY(-40px);
-    -o-transform: translateY(-40px);
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    -o-transform: translateY(150px);
 }
 100% {
     opacity: 1;
@@ -44,23 +44,23 @@ body {
       }
 
 .animated {
-  -webkit-animation-duration: 0.9s;
-  -webkit-animation-delay: 0.3s;
+  -webkit-animation-duration: 1.3s;
+  -webkit-animation-delay: 0.5s;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: both;
 
-  -moz-animation-duration: 0.9s;
-  -moz-animation-delay: 0.3s;
+  -moz-animation-duration: 1.3s;
+  -moz-animation-delay: 0.5s;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-fill-mode: both;
 
-  -o-animation-duration: 0.9s;
-  -o-animation-delay: 0.3s;
+  -o-animation-duration: 1.3s;
+  -o-animation-delay: 0.5s;
   -o-animation-timing-function: ease-in-out;
   -o-animation-fill-mode: both;
 
-  animation-duration: 0.9s;
-  animation-delay: 0.3s;
+  animation-duration: 1.3s;
+  animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
@@ -78,7 +78,7 @@ body {
   width:100%;
   height:100%;
   z-index: -2;
-  background-size: cover !important;
+  background: transparent;
 }
 
 .exodus_outer_content_wrapper {
@@ -432,7 +432,7 @@ div[id*='sys_region_'] {
   }
 
   .mobile_ham {
-    stroke: #ffb300;
+    stroke: #ffffff;
   }
 
   .mobile_quit {
@@ -445,7 +445,7 @@ div[id*='sys_region_'] {
 
   .menu_open .mobile_quit {
     display: inline;
-    stroke: #ffb300;
+    stroke: #ffffff;
   }
 
   .mob_menu_list {

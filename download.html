@@ -33,9 +33,11 @@
   <script type="text/javascript" src="classes/commons/resources/flyoutmenu/flyoutmenu.js"></script>
   <link rel="stylesheet" type="text/css" href="classes/commons/resources/global/global.css" />
   <script src="classes/commons/resources/paralax/parallax.js"></script>
+  <link rel="stylesheet" href="classes/commons/resources/cards/paper-collapse.min.css">
+  <script src="classes/commons/resources/cards/paper-collapse.min.js"></script>
 </head>
 <body>
-  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg">
+  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg" data-speed='0.6'>
     <div class="exodus_inner_bg_overlay">
       <div class="exodus_outer_content_wrapper">
         <header role="header">
@@ -159,75 +161,85 @@
                     <div id='exodus-panel-I53'>
                       <div id='exodus-panel-inner-I53'>
                         <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" >
-                          <div id="I0fa63f9fb20c4b82fc7642931268db75" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                            <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                              <h2 style="color: #403a3a; text-align: center;" class="over_outline"><i>End User License Agreement</i></h2>
+                          <div class="collapse-card">
+                            <div class="collapse-card__heading">
+                              <div class="collapse-card__title" style="">
+                                <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                                <h2 style="color: #4a4242;" class="over_outline">
+                                  <em>End User License Agreement</em>
+                                </h2>
+                              </div>
+                            </div>
+                            <div class="collapse-card__body">
+                              <ul class="over_outline">
+                                <li>Team Exodus or any of its contributors is not liable for any damages caused to your device due to use of any software in this distrobution under any circumstances.</li>
+                              </ul>
+                              <ul class="over_outline">
+                                <li>Team Exodus withholds the right to redistribute Exodus Android or any of its components modified or otherwise.</li>
+                              </ul>
+                              <ul>
+                                <li>Team Exodus withholds the right to publicly link directly to the download server. Instead link directly to this page.</li>
+                              </ul>
+                              <ul>
+                                <li>Team Exodus or any of its contributors holds the right to refuse support or service to anyone with no reasons required.</li>
+                              </ul>
+                              <ul class="over_outline">
+                                <li>Team Exodus or any of its contributors will not provide support for devices that disable ContentGuard** or install Xposed framework.</li>
+                              </ul>
+                              <h5 style="color: #454545;">
+                                <em>**This distribution contains support for ContentGuard as of July 24th. Applications flagged as malware, unsafe, or exploiting the market system will be automatically disabled and removed. For more information about this feature please visit this <a href="http://www.github.com/ContentGuard" target="_blank" style="color: #2181ff;">link</a>.</em>
+                              </h5>
                             </div>
                           </div>
-                        <div id="Ie550a2573fc6402af021e418817899b2" style="display:block;clear: both;" class="Text_2_Default">
-                      <div id="Ie550a2573fc6402af021e418817899b2_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                        <ul class="over_outline">
-                          <li>Team Exodus or any of its contributors is not liable for any damages caused to your device due to use of any software in this distrobution under any circumstances.</li>
-                        </ul>
-                        <ul class="over_outline">
-                          <li>Team Exodus withholds the right to redistribute Exodus Android or any of its components modified or otherwise.</li>
-                        </ul>
-                        <ul>
-                          <li>Team Exodus withholds the right to publicly link directly to the download server. Instead link directly to this page.</li>
-                        </ul>
-                        <ul>
-                          <li>Team Exodus or any of its contributors holds the right to refuse support or service to anyone with no reasons required.</li>
-                        </ul>
-                        <ul class="over_outline">
-                          <li>Team Exodus or any of its contributors will not provide support for devices that disable ContentGuard** or install Xposed framework.</li>
-                        </ul>
-                        <h5 style="color: #454545;">
-                          <em>**This distribution contains support for ContentGuard as of July 24th. Applications flagged as malware, unsafe, or exploiting the market system will be automatically disabled and removed. For more information about this feature please visit this <a href="http://www.github.com/ContentGuard" target="_blank" style="color: #2181ff;">link</a>.</em>
-                        </h5>
-                      </div>
-                    </div>
-                    <div id="Ic4b7948831304a9fc21e21b5d543c956" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                      <div id="Ic4b7948831304a9fc21e21b5d543c956_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                        <p style="text-align: center;" class="over_outline"><strong>By clicking "ACCEPT AND DOWNLOAD" you accept and agree to these terms</strong></p>
-                      </div>
-                    </div>
-                    <div id="I5578d8d0a6194947f4a4f64e442dc4cb" style="display:block;clear: both;" class="Layout1_Default">
-                      <div class="column column_divider" >
-                        <div id="Left_I5578d8d0a6194947f4a4f64e442dc4cb" class="left" >
-                          <div id="If1ad61cb616147e7d8adb5d44af994c9" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
-                            <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button blue pill outline">
-                              <a href="http://fitsnugly.euroskank.com/?rom=banks&device=gapps"  target="_blank" >Google Apps</a>
+                          <script>
+                            $(function () {
+                              $('.collapse-card').paperCollapse()
+                            })
+                          </script>       
+                          <div id="Ic4b7948831304a9fc21e21b5d543c956" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
+                            <div id="Ic4b7948831304a9fc21e21b5d543c956_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:30px; padding:0px; color:; font:; background-color:;">
+                              <p style="text-align: center;" class="over_outline"><strong>By clicking "ACCEPT AND DOWNLOAD" you accept and agree to the terms in the card above</strong></p>
                             </div>
                           </div>
-                        </div>
-                        <div id="Right_I5578d8d0a6194947f4a4f64e442dc4cb" class="right" >
-                          <div id="I131e310f6b964e2ff62ea336cab5a03e" style="display:block;clear: both;margin:50px 0 50px 0;" class="Button_Default">
-                            <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
-                              <a href="http://bit.ly/1Mrhs9g"  target="_blank" >Accept and Download</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="I577a823f188749c7d8973ede90df0757" style="display:block;clear: both;margin:10px 10px 10px 10px;" class="Horizontal_Line_Default">
-                      <div style='border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;font-size:0;padding:0;margin:0;height:0;line-height:0;'></div>
-                    </div>
-                    <div id="I9d6cff43bca54385c12d59cdd6b97731" style="display:block;clear: both;" class="Text_2_Default">
-                      <div id="I9d6cff43bca54385c12d59cdd6b97731_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                        <h2 style="color: #403a3a; text-align: center;" class="over_outline">
-                          <em>Installation Instructions</em>
-                        </h2>
-                        <p class="over_outline"><strong>1. Requirements<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Custom Recovery<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Supported device<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Exodus Android and Google Apps installation files on device storage<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Backup of all important data and firmware prefferable stored on another device</p>
-                        <p class="over_outline"><strong>2a. Clean Installation (When coming from another ROM)*<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Wipe system, data, cache, dalvik cache<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Install Exodus followed by Google apps</p>
-                        <p class="over_outline"><strong>2b. Dirty Installation (When Updating Manually)**<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Wipe cache, dalvik cache<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Install Exodus followed by Google apps</p>
-                        <p class="over_outline"><strong>2c. Updater Installation:**<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Navigate to<br><span style="color: #000000;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ♦  </span><em>Exodus Morph:<br></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings -&gt; Rom Controls -&gt; Exodus Updater<br><span style="color: #000000;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ♦  </span><em>Other Morph:<br></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings -&gt; About Phone -&gt; Exodus Updater<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Refresh Updates<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Download Latest<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Update using updater automated installation</p>
-                                <h5 style="color: #303030;" class="over_outline">
-                                  <em>*All installed apps, settings, and anything in the /data partition will be formated.</em><br><em>**No data loss will occur</em>
-                                </h5>
+                          <div id="I5578d8d0a6194947f4a4f64e442dc4cb" style="display:block;clear: both;" class="Layout1_Default">
+                            <div class="column column_divider" >
+                              <div id="Left_I5578d8d0a6194947f4a4f64e442dc4cb" class="left" >
+                                <div id="If1ad61cb616147e7d8adb5d44af994c9" style="display:block;clear: both;margin:40px 0 0 0;" class="Button_Default">
+                                  <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button blue pill outline">
+                                    <a href="http://fitsnugly.euroskank.com/?rom=banks&device=gapps"  target="_blank" >Google Apps</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="Right_I5578d8d0a6194947f4a4f64e442dc4cb" class="right" >
+                                <div id="I131e310f6b964e2ff62ea336cab5a03e" style="display:block;clear: both;margin:40px 0 50px 0;" class="Button_Default">
+                                  <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
+                                    <a href="http://bit.ly/1Mrhs9g"  target="_blank" >Accept and Download</a>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <div class="collapse-card">
+                            <div class="collapse-card__heading">
+                              <div class="collapse-card__title" style="">
+                                <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                                <h2 style="color: #4a4242;" class="over_outline">
+                                  <em>Installation Instructions</em>
+                                </h2>
+                              </div>
+                            </div>
+                            <div class="collapse-card__body">
+                              <p class="over_outline"><strong>1. Requirements<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Custom Recovery<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Supported device<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Exodus Android and Google Apps installation files on device storage<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Backup of all important data and firmware prefferable stored on another device</p>
+                              <p class="over_outline"><strong>2a. Clean Installation (When coming from another ROM)*<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Wipe system, data, cache, dalvik cache<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Install Exodus followed by Google apps</p>
+                              <p class="over_outline"><strong>2b. Dirty Installation (When Updating Manually)**<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Wipe cache, dalvik cache<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Install Exodus followed by Google apps</p>
+                              <p class="over_outline"><strong>2c. Updater Installation:**<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span></strong>Navigate to<br><span style="color: #000000;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ♦  </span><em>Exodus Morph:<br></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings -&gt; Rom Controls -&gt; Exodus Updater<br><span style="color: #000000;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ♦  </span><em>Other Morph:<br></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings -&gt; About Phone -&gt; Exodus Updater<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Refresh Updates<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Download Latest<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Update using updater automated installation</p>
+                              <h5 style="color: #303030;" class="over_outline">
+                                <em>*All installed apps, settings, and anything in the /data partition will be formated.</em><br><em>**No data loss will occur</em>
+                              </h5>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                       </div>
                       <div id="footer" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
                         <div id='footer-panel'>

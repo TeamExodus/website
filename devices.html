@@ -55,6 +55,8 @@
     });
   </script>
   <script src="classes/commons/resources/paralax/parallax.js"></script>
+  <link rel="stylesheet" href="classes/commons/resources/cards/paper-collapse.min.css">
+  <script src="classes/commons/resources/cards/paper-collapse.min.js"></script>
 </head>
 <body>
   <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg">
@@ -182,31 +184,39 @@
                       <div id='exodus-panel-inner-I53'>
                         <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" >
                           <div id="I0fa63f9fb20c4b82fc7642931268db75" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                            <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                              <h2 style="color: #403a3a; text-align: center;" class="over_outline"><i>Supported Devices</i></h2>
-                            </div>
-                          </div>
-                        <div id="Ie550a2573fc6402af021e418817899b2" style="display:block;clear: both;" class="Text_2_Default">
-                      <div id="Ie550a2573fc6402af021e418817899b2_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                        <div id="I43" style="display:block;clear: both;margin:0 0 0 0;" class="Layout1_Default">
-                          <div class="column column_divider" >
-                            <div id="Left_I43" class="left" >
-                              <div id="I44" style="display:block;clear: both;text-align:center;margin:0 0 0 0;" class="Image_Default">
-                                <div id="devices1">Loading device list...</div>
-                              </div>
-                            </div>
-                            <div id="Right_I43" class="right" >
-                              <div id="I45" style="display:block;clear: both;text-align:center;margin:0 0 0 0;" class="Image_Default">
-                                <div id="devices2"></div>
+<div class="collapse-card">
+                              <div class="collapse-card__heading">
+                                <div class="collapse-card__title" style="">
+                                  <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                                  <h2 style="color: #403a3a;" class="over_outline">
+                                    <em>Supported Devices</em>
+                                  </h2>
+                                </div>
+                                <div class="collapse-card__body">
+                                  <div id="I43" style="display:block;clear: both;margin:10 0 0 0;" class="Layout1_Default">
+                                    <div class="column column_divider" >
+                                      <div id="Left_I43" class="left" >
+                                        <div id="I44" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
+                                          <div id="devices1">Loading device list...</div>
+                                        </div>
+                                      </div>
+                                      <div id="Right_I43" class="right" >
+                                        <div id="I45" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
+                                          <div id="devices2"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <script>
+                                  $(function () {
+                                    $('.collapse-card').paperCollapse()
+                                  })
+                                </script>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div id="Ia975270dbd934750fbd2973847bc567e" style="display:block;clear: both;margin:50px 10px 10px 10px;" class="Horizontal_Line_Default">
-                      <div style='border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;font-size:0;padding:0;margin:0;height:0;line-height:0;'></div>
-                    </div>
                       <div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
                         <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
                           <a href="download.html" >Download Now</a>

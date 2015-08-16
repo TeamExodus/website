@@ -33,9 +33,11 @@
   <script type="text/javascript" src="classes/commons/resources/flyoutmenu/flyoutmenu.js"></script>
   <link rel="stylesheet" type="text/css" href="classes/commons/resources/global/global.css" />
   <script src="classes/commons/resources/paralax/parallax.js"></script>
+  <link rel="stylesheet" href="classes/commons/resources/cards/paper-collapse.min.css">
+  <script src="classes/commons/resources/cards/paper-collapse.min.js"></script>
 </head>
 <body>
-  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg">
+  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg" data-speed='0.6'>
     <div class="exodus_inner_bg_overlay">
       <div class="exodus_outer_content_wrapper">
         <header role="header">
@@ -158,26 +160,33 @@
                   <div id="sys_region_1" class="zone_top" ><div id="I53" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
                     <div id='exodus-panel-I53'>
                       <div id='exodus-panel-inner-I53'>
-                        <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" ><div id="Ic4b29b806bcd4063d196f90ba26fd844" style="display:block;clear: both;" class="Text_2_Default">
-                          <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                            <h2 style="text-align: center;">
-                              <em>About Donations</em>
-                            </h2>
+                        <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" >
+                          <div class="collapse-card">
+                            <div class="collapse-card__heading">
+                              <div class="collapse-card__title" style="">
+                                <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                                <h2 style="color: #4a4242;" class="over_outline">
+                                  <em>About Donations</em>
+                                </h2>
+                              </div>
+                            </div>
+                            <div class="collapse-card__body">
+                              <p style="text-align: left;">This distribution was made possible by contributions to Team Exodus from users like you. <strong style="color: rgb(0, 154, 3);">Thank you</strong>.</p>
+                                <ul>
+                                  All donations contribute to one of the following...
+                                  <li>Funding build/web server used to make nightly builds, host downloads, and web pages including this one</li>
+                                  <li>Supporting the developers who spend hours each day coding for Exodus Android.</li>
+                                  <li>Adding support to more devices**</li>
+                                  <br>
+                                </ul>
+                                <h5 style="color: #454545;">**Team Exodus can only provide support for devices that a team member has the ability to test on. In order to add support for new devices a team member has to obtain the device to ensure the device is fully compatible with Exodus Android.</h5>
+                            </div>
                           </div>
-                        </div>
-                      <div id="Ib10dd511990a4490ad39b3bfd1636ddd" style="display:block;clear: both;" class="Text_2_Default">
-                        <div id="Ib10dd511990a4490ad39b3bfd1636ddd_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                          <p style="text-align: left;">This distribution was made possible by contributions to Team Exodus from users like you. <strong style="color: rgb(0, 154, 3);">Thank you</strong>.</p>
-                            <ul>
-                              All donations contribute to one of the following...
-                              <li>Funding build/web server used to make nightly builds, host downloads, and web pages including this one</li>
-                              <li>Supporting the developers who spend hours each day coding for Exodus Android.</li>
-                              <li>Adding support to more devices**</li>
-                              <br>
-                            </ul>
-                              <h5 style="color: #454545;">**Team Exodus can only provide support for devices that a team member has the ability to test on. In order to add support for new devices a team member has to obtain the device to ensure the device is fully compatible with Exodus Android.</h5>
-                          </div>
-                        </div>
+                          <script>
+                            $(function () {
+                              $('.collapse-card').paperCollapse()
+                            })
+                          </script>
                         <div id="I39dd88cd4c9b4b4aa0cce1b18b6523ba" style="display:block;clear: both;" class="Layout1_Default">
                           <div class="column column_divider" >
                             <div id="Left_I43" class="left" >
