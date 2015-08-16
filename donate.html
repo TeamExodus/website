@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -18,7 +19,7 @@
   <![endif]-->
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Devices</title>
+  <title>Donate</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <link href="resources/icon.png" rel="shortcut icon" type="image/x-icon" />
@@ -30,31 +31,8 @@
   <link rel="stylesheet" type="text/css" href="classes/commons/resources/flyoutmenu/flyoutmenu.css" />
   <script type="text/javascript" src="classes/commons/resources/flyoutmenu/flyoutmenu.js"></script>
   <link rel="stylesheet" type="text/css" href="classes/commons/resources/global/global.css" />
-  <script type="text/javascript" >
-        $(function() {
-            $.get('https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets', function(data) {
-                var lines = data.split("\n");
-                var devices1 = "";
-                var devices2 = "";
-                for (var i = 0, len = lines.length; i < len; i++) {
-                  if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
-                      && lines[i] != "") {
-                    device = lines[i].replace("exodus_", "");
-                    device = device.replace("-userdebug", "");
-                    if (i < len/2) {
-                      devices1 += '<li>' + device + '<br /></li>';
-                    } else {
-                      devices2 += '<li>' + device + '<br /></li>';
-                    }
-                  }
-                }
-                $('#devices1').html(devices1);
-                $('#devices2').html(devices2);
-            });
-        });
-  </script>
 </head>
-<body onload = "">
+<body>
   <div id="sys_background" class="exodus_bg_overlay">
     <div class="exodus_inner_bg_overlay">
       <div class="exodus_outer_content_wrapper">
@@ -83,7 +61,7 @@
                         <li class="">
                           <a href="features.html" title="Features Overview">Features</a>
                         </li>
-                        <li class="selected">
+                        <li class="">
                           <a href="devices.html" title="Supported Devices">Devices</a>
                         </li>
                         <li class="">
@@ -92,7 +70,7 @@
                         <!--li class="">
                           <a href="http://www.google.com" target="_blank" title="Bug Report">Bug Report</a>
                         </li-->
-                        <li class="">
+                        <li class="selected">
                           <a href=" donate.html" title="Donate to Exouds">Donate</a>
                         </li>
                       </ul>
@@ -102,11 +80,11 @@
                     <h1>
                       <a id="sys_heading" class="exodus_hide_logo" href="index.html">
                         <img class="exodus_site_logo" src="devices.html" alt=" Supported Devices" >
-                        <span><i>Supported Devices</i></span>
+                        <span><i>Donate to Exodus</i></span>
                       </a>
                     </h1>
                   </div>
-                  <div id="exodus_nav_block"> <!--Nav-->
+                                    <div id="exodus_nav_block"> <!--Nav-->
                     <nav role="navigation">
                       <div class="sys_navigation">
                         <ul class="sys_navigation">
@@ -116,7 +94,7 @@
                           <li id="ys_menu_1">
                             <a href="features.html" title="Features Overview">Features</a>
                           </li>
-                          <li id="ys_menu_2" class="selected">
+                          <li id="ys_menu_2">
                             <a href="devices.html" title="Supported Devices">Devices</a>
                           </li>
                           <li id="ys_menu_3">
@@ -125,7 +103,7 @@
                           <!--li id="ys_menu_3">
                             <a href="http://www.google.com" target="_blank" title="Bug Report">Bug Report</a>
                           </li-->
-                          <li id="ys_menu_4">
+                          <li id="ys_menu_4" class="selected">
                             <a href=" donate.html" title="Donate to Exodus">Donate</a>
                           </li>
                         </ul>
@@ -181,60 +159,69 @@
         <main class="exodus_content_wrap" role="main">
           <div class="exodus_content_column">
             <div class="exodus_inner_content_column">
-              <div style="padding:0; height:0; clear:both;"> </div>
+              <div style="padding:0; height:0; clear:both;"></div>
               <div class="layout_1-column sys_layout">
                 <div id="layout_row1">
                   <div id="sys_region_1" class="zone_top" ><div id="I53" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
                     <div id='exodus-panel-I53'>
                       <div id='exodus-panel-inner-I53'>
-                        <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" >
-                          <div id="I0fa63f9fb20c4b82fc7642931268db75" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                            <div id="I0fa63f9fb20c4b82fc7642931268db75_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                              <h2 style="color: #403a3a; text-align: center;" class="over_outline"><i>Supported Devices</i></h2>
-                            </div>
+                        <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" ><div id="Ic4b29b806bcd4063d196f90ba26fd844" style="display:block;clear: both;" class="Text_2_Default">
+                          <div id="Ic4b29b806bcd4063d196f90ba26fd844_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                            <h2 style="text-align: center;">
+                              <em>About Donations</em>
+                            </h2>
                           </div>
-                        <div id="Ie550a2573fc6402af021e418817899b2" style="display:block;clear: both;" class="Text_2_Default">
-                      <div id="Ie550a2573fc6402af021e418817899b2_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                        <div id="I43" style="display:block;clear: both;margin:0 0 0 0;" class="Layout1_Default">
+                        </div>
+                      <div id="Ib10dd511990a4490ad39b3bfd1636ddd" style="display:block;clear: both;" class="Text_2_Default">
+                        <div id="Ib10dd511990a4490ad39b3bfd1636ddd_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                          <p style="text-align: left;">This distribution was made possible by contributions to Team Exodus from users like you. <strong style="color: rgb(0, 154, 3);">Thank you</strong>.</p>
+                            <ul>
+                              All donations contribute to one of the following...
+                              <li>Funding build/web server used to make nightly builds, host downloads, and web pages including this one</li>
+                              <li>Supporting the developers who spend hours each day coding for Exodus Android.</li>
+                              <li>Adding support to more devices**</li>
+                              <br>
+                            </ul>
+                              <h5 style="color: #454545;">**Team Exodus can only provide support for devices that a team member has the ability to test on. In order to add support for new devices a team member has to obtain the device to ensure the device is fully compatible with Exodus Android.</h5>
+                          </div>
+                        </div>
+                        <div id="I39dd88cd4c9b4b4aa0cce1b18b6523ba" style="display:block;clear: both;" class="Layout1_Default">
                           <div class="column column_divider" >
                             <div id="Left_I43" class="left" >
-                              <div id="I44" style="display:block;clear: both;text-align:center;margin:0 0 0 0;" class="Image_Default">
-                                <div id="devices1">Loading device list...</div>
+                              <div id="I44" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
+                                <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
+                                  <a href="http://forum.xda-developers.com/donatetome.php?u=4429892" >Server</a>
+                                </div>
                               </div>
                             </div>
-                            <div id="Right_I43" class="right" >
-                              <div id="I45" style="display:block;clear: both;text-align:center;margin:0 0 0 0;" class="Image_Default">
-                                <div id="devices2"></div>
+                            <div id="Right_I43" class="right" ><div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
+                              <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button blue pill outline">
+                                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=55Q5LNS8UAXNJ" >Devices</a>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div id="Ia975270dbd934750fbd2973847bc567e" style="display:block;clear: both;margin:50px 10px 10px 10px;" class="Horizontal_Line_Default">
-                      <div style='border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#999999;font-size:0;padding:0;margin:0;height:0;line-height:0;'></div>
-                    </div>
-                      <div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
-                        <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
-                          <a href="download.html" >Download Now</a>
-                        </div>
+                      <div id="thanks" style="display:block;clear: both;text-align:center;" class="Image_Default">
+                        <img id="thanks_img" src="resources/thanks.png"  />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            <div id="I17" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
-              <div id='exodus-panel-I17'>
-                <div id='exodus-panel-inner-I17'>
-                  <div id="Panel_I17" style="text-align:left; vertical-align:top; margin:0 auto;" ><div id="I19" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                    <div id="I19_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                      <p style="text-align: center;" class="over_outline">
-                        <br>
-                      </p>
-                      <p style="color: #ffffff; text-align: center;" class="over_outline"> <a href="https://github.com/TeamExodus" style="color: #ffffff;">Source</a>  /  <a href="https://plus.google.com/u/0/communities/106801227383087889476" style="color: #ffffff;">Google+</a>  /  <a href="https://twitter.com/ExodusAndroid" style="color: #ffffff;">Twitter</a>
-                        <br>
-                        <em>© Copyright 2015 Exodus Android</em>
-                      </p>
+              <div id="I17" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
+                <div id='exodus-panel-I17'>
+                  <div id='exodus-panel-inner-I17'>
+                    <div id="Panel_I17" style="text-align:left; vertical-align:top; margin:0 auto;" ><div id="I19" style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
+                      <div id="I19_sys_txt" systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                        <p style="text-align: center;" class="over_outline">
+                          <br>
+                        </p>
+                        <p style="color: #ffffff; text-align: center;" class="over_outline"> <a href="https://github.com/TeamExodus" style="color: #ffffff;">Source</a>  /  <a href="https://plus.google.com/u/0/communities/106801227383087889476" style="color: #ffffff;">Google+</a>  /  <a href="https://twitter.com/ExodusAndroid" style="color: #ffffff;">Twitter</a>
+                          <br>
+                          <em>© Copyright 2015 Exodus Android</em>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -242,11 +229,9 @@
             </div>
           </div>
         </div>
-      </div>
+      <div style="padding:0; height:0; clear:both;"></div>
     </div>
-  <div style="padding:0; height:0; clear:both;"> </div>
-</div>
-</div>
+  </div>
 </main>
 </div>
 </div> <!-- .inner_bg_overlay -->

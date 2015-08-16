@@ -1029,7 +1029,7 @@ div#Panel_I53 {
 #exodus-panel-I53{background:#ffffff;}
 #exodus-panel-inner-I53{background-position:top left;background-repeat:repeat;padding:50px 30px 50px 30px;}
 
-#I44_img {
+#device_img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1039,11 +1039,11 @@ div#Panel_I53 {
   height: auto;
 }
 
-#I45_img {
+#thanks_img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 396px;
+  width: 440px;
   border:none;
   max-width: 100%;
   height: auto;
