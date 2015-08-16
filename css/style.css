@@ -4,7 +4,6 @@
 */
 body {
   background-color: #1f1f1f;
-  background-image: url(../resources/wallpaper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top center;
@@ -12,6 +11,58 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  overflow: auto;
+}
+
+
+
+.exodus-logo {
+  z-index: 1000;
+  position: relative;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+     @-Webkit-keyframes fadeInDown {
+0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+      }
+
+.animated {
+  -webkit-animation-duration: 0.9s;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+
+  -moz-animation-duration: 0.9s;
+  -moz-animation-delay: 0.3s;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: both;
+
+  -o-animation-duration: 0.9s;
+  -o-animation-delay: 0.3s;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-fill-mode: both;
+
+  animation-duration: 0.9s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
 .Text_2_Default,
@@ -26,6 +77,8 @@ body {
   min-width: 100%;
   width:100%;
   height:100%;
+  z-index: -2;
+  background-size: cover !important;
 }
 
 .exodus_outer_content_wrapper {
@@ -938,7 +991,9 @@ div#Footer-panel {
 }
 
 div#Panel_I53 {
+  z-index:2000;
   max-width:900px;
+position: relative;
 }
 #exodus-panel-I53{background:#ffffff;}
 #exodus-panel-inner-I53{background-position:top left;background-repeat:repeat;padding:50px 30px 50px 30px;}

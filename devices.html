@@ -21,6 +21,7 @@
   <title>Supported Devices</title>
   <meta name="description" content="Devices that Team Exodus actively supports." />
   <meta name="keywords" content="" />
+  <meta name="author" content="Team Exodus">
   <link href="resources/icon.png" rel="shortcut icon" type="image/x-icon" />
   <link href="resources/icon.png" rel="icon" type="image/x-icon" />
   <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -31,31 +32,32 @@
   <script type="text/javascript" src="classes/commons/resources/flyoutmenu/flyoutmenu.js"></script>
   <link rel="stylesheet" type="text/css" href="classes/commons/resources/global/global.css" />
   <script type="text/javascript" >
-        $(function() {
-            $.get('https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets', function(data) {
-                var lines = data.split("\n");
-                var devices1 = "";
-                var devices2 = "";
-                for (var i = 0, len = lines.length; i < len; i++) {
-                  if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
-                      && lines[i] != "") {
-                    device = lines[i].replace("exodus_", "");
-                    device = device.replace("-userdebug", "");
-                    if (i < len/2) {
-                      devices1 += '<li>' + device + '<br /></li>';
-                    } else {
-                      devices2 += '<li>' + device + '<br /></li>';
-                    }
-                  }
-                }
-                $('#devices1').html(devices1);
-                $('#devices2').html(devices2);
-            });
-        });
+    $(function() {
+      $.get('https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets', function(data) {
+        var lines = data.split("\n");
+        var devices1 = "";
+        var devices2 = "";
+        for (var i = 0, len = lines.length; i < len; i++) {
+          if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
+              && lines[i] != "") {
+            device = lines[i].replace("exodus_", "");
+            device = device.replace("-userdebug", "");
+            if (i < len/2) {
+              devices1 += '<li>' + device + '<br /></li>';
+            } else {
+              devices2 += '<li>' + device + '<br /></li>';
+            }
+          }
+        }
+        $('#devices1').html(devices1);
+        $('#devices2').html(devices2);
+      });
+    });
   </script>
+  <script src="classes/commons/resources/paralax/parallax.js"></script>
 </head>
-<body onload = "">
-  <div id="sys_background" class="exodus_bg_overlay">
+<body>
+  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg">
     <div class="exodus_inner_bg_overlay">
       <div class="exodus_outer_content_wrapper">
         <header role="header">
