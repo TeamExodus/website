@@ -67,14 +67,14 @@
 
         for (var i = 0, len = devices.length; i < len; i++) {
           devices1 += devices[i];
-          if (i == len/2) {
+          if (i >= len/2 && devices0 == "") {
             devices0 = devices1;
             devices1 = "";
           }
         }
 
-        $('#devices1').html(devices0);
-        $('#devices2').html(devices1);
+        $('#devices0').html(devices0);
+        $('#devices1').html(devices1);
       });
     });
 
@@ -137,13 +137,15 @@
         return ["Google ","Nexus 4",""];
       if (device == "manta")
         return ["Google ","Nexus 10",""];
+      if (device == "n7100")
+        return ["Samsung ","Galaxy Note 2",""];
       if (device == "obake")
         return ["Motorola ","Droid Turbo",""];
       if (device == "picassowifi")
         return ["Samsung ","Galaxy Tab Pro 10.1"," - Wifi"];
       if (device == "scorpion")
         return ["Sony ","Xperia Z3 Tablet Compact",""];
-      if (device == "scorpion_windy" || device == "scorpion_windy_userdebug")
+      if (device == "scorpion_windy")
         return ["Sony ","Xperia Z3 Tablet Compact"," - Wifi"];
       if (device == "shamu")
         return ["Google ","Nexus 6",""];
@@ -165,7 +167,7 @@
         return ["Motorola ","Droid RAZR HD",""];
       if (device == "z3")
         return ["Sony ","Xperia Z3",""];
-      if (device == "exodus-z3c" || device == "z3c")
+      if (device == "z3c")
         return ["Sony ","Xperia Z3 Compact",""];
       return ["",device,""];
     }
@@ -268,12 +270,12 @@
                                   <div class="column column_divider" >
                                     <div id="Left_I43" class="left" >
                                       <div id="I44" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
-                                        <div id="devices1">Loading device list...</div>
+                                        <div id="devices0">Loading device list...</div>
                                       </div>
                                     </div>
                                     <div id="Right_I43" class="right" >
                                       <div id="I45" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
-                                        <div id="devices2"></div>
+                                        <div id="devices1"></div>
                                       </div>
                                     </div>
                                   </div>
