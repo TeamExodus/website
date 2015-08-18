@@ -503,13 +503,6 @@ div#heading h1 a {
   text-transform: none;
 }
 
-/* Hyperlinks (a, a:hover, a:visited) */
-a, .sys_txt a:link, .sys_layout a:link {color: #0069ec;}
-a, .sys_txt a:link, .sys_layout a:link {text-decoration: none;}
-a:visited, .sys_txt a:visited, .sys_layout a:visited {color: #f80615;}
-a:hover, .sys_txt a:hover, .sys_layout a:hover {color: #009a03;}
-a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
-
 /* Headings (h2, h3, h4, h5, h6) */
 .sys_layout h2, .sys_txt h2 {
   font-family: 'Roboto';
@@ -616,33 +609,33 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
 }
 
 /*button widget*/
-.sys_layout .sys_button a, .sys_layout .sys_button a:link, .sys_layout .sys_button a:visited {
+.sys_button a,.sys_button a:link, .sys_layout .sys_button a:visited {
   display:inline-block;
   text-decoration: none;
 }
-.sys_layout .sys_button a:link, .sys_layout .sys_button a:visited {
+.sys_button a:link, .sys_button a:visited {
   cursor:pointer;
 }
-.sys_layout .sys_button a {
+.sys_button a {
   cursor:default;
 }
 
-.sys_layout .sys_button.square a, .sys_layout .sys_button.square a:link {
+.sys_button.square a, .sys_button.square a:link {
   border-radius:0px;
 }
 
-.sys_layout .sys_button.rounded a, .sys_layout .sys_button.rounded a:link {
+.sys_button.rounded a, .sys_button.rounded a:link {
   border-radius:3px;
 }
 
-.sys_layout .sys_button.pill a, .sys_layout .sys_button.pill a:link {
+.sys_button.pill a, .sys_button.pill a:link {
   border-radius:90px;
 }
 
 /*button sizes*/
-.sys_layout .sys_button.small a,
-.sys_layout .sys_button.small a:link,
-.sys_layout .sys_button.small a:visited {
+.sys_button.small a,
+.sys_button.small a:link,
+.sys_button.small a:visited {
   font-size: 0.7rem;
   padding-top:0.6rem;
   padding-bottom:0.6rem;
@@ -650,9 +643,9 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
   padding-right:1.5rem;
 }
 
-.sys_layout .sys_button.green a,
-.sys_layout .sys_button.green a:link,
-.sys_layout .sys_button.green a:visited {
+.sys_button.green a,
+.sys_button.green a:link,
+.sys_button.green a:visited {
   font-family: 'Roboto';
   font-weight: 900;
   font-size: 1rem;
@@ -663,9 +656,9 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
   padding-right:2.2rem;
 }
 
-.sys_layout .sys_button.blue a,
-.sys_layout .sys_button.blue a:link,
-.sys_layout .sys_button.blue a:visited {
+.sys_button.blue a,
+.sys_button.blue a:link,
+.sys_button.blue a:visited {
   font-family: 'Roboto';
   font-weight: 900;
   font-size: 1rem;
@@ -677,18 +670,18 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
 }
 
 /*button styles:small*/
-.sys_layout .sys_button.small.outline a, .sys_layout .sys_button.small.outline a:link {
+.sys_button.small.outline a, .sys_button.small.outline a:link {
   border-color:#88d5c2;
   color: #88d5c2;
   border-style: solid;
   border-width: 2px;
 }
 
-.sys_layout .sys_button.small.outline a:visited {
+.sys_button.small.outline a:visited {
   color: #88d5c2;
 }
 
-.sys_layout .sys_button.small.solid a, .sys_layout .sys_button.small.solid a:link {
+.sys_button.small.solid a, .sys_button.small.solid a:link {
   background-color: #88d5c2;
   color: #ffffff;
   border-color:#88d5c2;
@@ -696,29 +689,29 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
   border-width: 2px;
 }
 
-.sys_layout .sys_button.small.solid a:visited {
+.sys_button.small.solid a:visited {
   color: #ffffff;
 }
 
-.sys_layout .sys_button.small.outline a:hover {
+.sys_button.small.outline a:hover {
   background-color: #88d5c2;
   color: #ffffff;
   text-decoration: none;
 }
 
 /*button styles:green*/
-.sys_layout .sys_button.green.outline a, .sys_layout .sys_button.green.outline a:link {
+.sys_button.green.outline a, .sys_button.green.outline a:link {
   border-color:rgba(0,154,3,1.00);
   color: rgba(0,154,3,1.00);
   border-style: solid;
   border-width: 2px;
 }
 
-.sys_layout .sys_button.green.outline a:visited {
+.sys_button.green.outline a:visited {
   color: rgba(0,154,3,1.00);
 }
 
-.sys_layout .sys_button.green.solid a, .sys_layout .sys_button.green.solid a:link {
+.sys_button.green.solid a, .sys_button.green.solid a:link {
   background-color: #009a03;
   color: #ffffff;
   border-color:rgba(0,154,3,1.00);
@@ -726,47 +719,47 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
   border-width: 2px;
 }
 
-.sys_layout .sys_button.green.solid a:visited {
+.sys_button.green.solid a:visited {
   color: #ffffff;
 }
 
-.sys_layout .sys_button.green.outline a:hover {
+.sys_button.green.outline a:hover {
   background-color: rgba(0,154,3,1.00);
   color: #ffffff;
   text-decoration: none;
 }
 
 /*button styles:blue*/
-.sys_layout .sys_button.blue.outline a, .sys_layout .sys_button.blue.outline a:link {
+.sys_button.blue.outline a, .sys_button.blue.outline a:link {
   border-color: rgba(0,105,236,1.00);
   color: rgba(0,105,236,1.00);
   border-style: solid;
   border-width: 2px;
 }
 
-.sys_layout .sys_button.blue.outline a:visited {
+.sys_button.blue.outline a:visited {
   color: rgba(0,105,236,1.00);
 }
 
-.sys_layout .sys_button.blue.solid a, .sys_layout .sys_button.blue.solid a:link {
-  background-color: #fafafa;
-  color: #fafafa;
+.sys_button.blue.solid a, .sys_button.blue.solid a:link {
+  background-color: rgba(0,105,236,1.00);
+  color: #ffffff;
   border-color: rgba(0,105,236,1.00);
   border-style: solid;
   border-width: 2px;
 }
 
-.sys_layout .sys_button.blue.solid a:visited {
+.sys_button.blue.solid a:visited {
   color: #fafafa;
 }
 
-.sys_layout .sys_button.blue.outline a:hover {
+.sys_button.blue.outline a:hover {
   background-color: rgba(0,105,236,1.00);
   color: #fafafa;
   text-decoration: none;
 }
 
-.sys_layout .sys_button.solid a:hover {
+.sys_button.solid a:hover {
   text-decoration: none;
   opacity: .8;
 }
@@ -914,7 +907,7 @@ div.sys_text_widget img{margin:4px;}
   text-align: left;
   vertical-align: top;
   width: 50%;
-  padding: 0 15px 0 0;
+  padding: 0 0 0 20px;
   float: left;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -924,7 +917,7 @@ div.sys_text_widget img{margin:4px;}
 .column .right {
   vertical-align: top;
   width: 50%;
-  padding: 0 0 0 15px;
+  padding: 0 20px 0 0;
   float: left;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

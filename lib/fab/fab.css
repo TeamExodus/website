@@ -7,7 +7,10 @@ Primary style
 .fab-primary-nav-menu {
   display:none;
 }
-@media only screen and (max-width : 736px) {
+.fab-nav-trigger {
+  display: none;
+}
+@media only screen and (max-width : 767px) {
   *, *::after, *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

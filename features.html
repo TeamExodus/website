@@ -1,10 +1,7 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="73uI86EQwkLESNcoqpTTB_RfL8V81HBoYcH_0bUpXi8" />
 
@@ -12,99 +9,115 @@
   <link rel="stylesheet" href="templates/Skyline_v2/resources/css/reset.css">
   <link rel="stylesheet" href="templates/Skyline_v2/resources/css/less.build.css">
 
-  <!--[if lte IE 9]>
-  <script src="templates/Skyline_v2/resources/js/html5shiv.js"></script>
-  <script src="templates/Skyline_v2/resources/js/html5shiv-printshiv.js"></script>
-
-  <![endif]-->
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Features Overveiw</title>
   <meta name="description" content="Check out the features that are only aviable in Exodus Android." />
   <meta name="keywords" content="" />
-  <link href="resources/icon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="resources/icon.png" rel="icon" type="image/x-icon" />
-  <link type="text/css" rel="stylesheet" href="css/style.css">        
   <meta name="author" content="Team Exodus">
+  <link href="img/icon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="img/icon.png" rel="icon" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" href="css/style.css">        
   <script src='http://ajax.googleapis.com/ajax/libs/webfont/1.4.2/webfont.js' type='text/javascript'></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript">window.jQuery || document.write('<script src="classes/components/bower_components/jquery/dist/jquery.js"><\/script>')</script>
   <link rel="stylesheet" type="text/css" href="classes/components/Gallery/layouts/Default/Default.css" />
-  <script src="classes/commons/resources/paralax/parallax.js"></script>
-  <link rel="stylesheet" href="classes/commons/resources/cards/paper-collapse.min.css">
-  <script src="classes/commons/resources/cards/paper-collapse.min.js"></script>
-  <link rel="stylesheet" href="classes/commons/resources/fab/fab.css">
-  <script src="classes/commons/resources/fab/velocity.min.js"></script>
-  <script src="classes/commons/resources/fab/fab.js"></script>
+  <link rel="stylesheet" href="lib/cards/paper-collapse.min.css">
+  <script src="lib/cards/paper-collapse.min.js"></script>
+  <link rel="stylesheet" href="lib/fab/fab.css">
+  <script src="lib/fab/velocity.min.js"></script>
+  <script src="lib/fab/fab.js"></script>
+  <link rel="stylesheet" href="lib/nav/nav.css">
+  <script src="lib/nav/nav.js"></script>
+  <link rel="stylesheet" href="lib/overview/overview.css">
+  <script src="lib/overview/overview.js"></script>
 </head>
-<body>    
-<div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg" data-speed='0.6'>
-  <div class="exodus_inner_bg_overlay">
-    <div class="exodus_outer_content_wrapper">
-      <header role="header">
-        <div class="exodus_outer_heading_wrap">
-          <div class="exodus_heading_container">
-            <div class="exodus_inner_heading_wrap left">
-              <div class="exodus_innermost_heading_wrap">
-                <nav class="fab-primary-nav-menu">
-                  <ul class="fab-primary-nav">
-                    <li>
-                      <a href="index.html" title="Exodus Android">Exodus</a>
-                    </li>
-                    <li class="selected">
-                      <a href="features.html" title="Features Overview">Features</a>
-                    </li>
-                    <li>
-                      <a href="devices.html" title="Supported Devices">Devices</a>
-                    </li>
-                    <li>
-                      <a href="download.html" title="Download Exouds">Download</a>
-                    </li>
-                    <li>
-                      <a href=" donate.html" title="Donate to Exodus">Donate</a>
-                    </li>
-                  </ul>
-                </nav>
-                <div id="exodus_heading_block"> <!--Title / Logo-->
-                  <h1>
-                    <a id="sys_heading" class="exodus_hide_logo" href="index.html">
-                      <img class="exodus_site_logo" src="features.html" alt="Feature Overview" >
-                      <span><i>Feature Overview</i></span>
-                    </a>
-                  </h1>
+<body>
+  <header class="nav-header">
+    <nav class="fab-primary-nav-menu">
+      <ul class="fab-primary-nav">
+        <li>
+          <a href="index.html" title="Exodus Android">Exodus</a>
+        </li>
+        <li class="selected">
+          <a href="features.html" title="Features Overview">Features</a>
+        </li>
+        <li>
+          <a href="devices.html" title="Supported Devices">Devices</a>
+        </li>
+        <li>
+          <a href="download.html" title="Download Exouds">Download</a>
+        </li>
+        <li>
+          <a href=" donate.html" title="Donate to Exodus">Donate</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="exodus_heading_block"> <!--Title / Logo-->
+      <h1>
+        <a id="sys_heading" class="exodus_hide_logo" href="index.html">
+          <img class="exodus_site_logo" src="index.html" alt="" >
+          <span></span>
+        </a>
+      </h1>
+    </div>
+  </header>
+  <section id="nav-intro" style="min-height:200px; height:200px">
+    <div id="nav-intro-tagline"  style="padding-top:25px">
+        <div id="sys_region_1" class="zone_top" >
+        <div id="I3" style="display:block;clear: both;margin:0rem 0rem 0rem 0rem;" class="Panel_Default">
+          <div id='exodus-panel-I3'>
+            <div class="exodus-logo animated fadeInDown">
+              <div id='exodus-panel-inner-I3'>
+                <div id="I4" style="display:block;clear: both;margin:25px 0 0 0;" class="Text_2_Default">
+                  <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                    <h2 style="text-align: center;font-size:2.3rem;" class="over_outline">
+                      <em>Features Overview</em>
+                    </h2>
+                  </div>
                 </div>
-                <div id="exodus_nav_block"> <!--Nav-->
-                  <nav role="navigation">
-                    <div class="sys_navigation">
-                      <ul class="sys_navigation">
-                        <li id="ys_menu_0">
-                          <a href="index.html" title="Exodus Android">Exodus</a>
-                        </li>
-                        <li id="ys_menu_1" class="selected">
-                          <a href="features.html" title="Features Overview">Features</a>
-                        </li>
-                        <li id="ys_menu_2">
-                          <a href="devices.html" title="Supported Devices">Devices</a>
-                        </li>
-                        <li id="ys_menu_3">
-                          <a href="download.html" title="Download Exouds">Download</a>
-                        </li>
-                        <!--li id="ys_menu_3">
-                          <a href="http://www.google.com" target="_blank" title="Bug Report">Bug Report</a>
-                        </li-->
-                        <li id="ys_menu_4">
-                          <a href=" donate.html" title="Donate to Exodus">Donate</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-                </div>
-                <div style="padding:0; height:0; clear:both;">&nbsp;</div>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </div> <!-- #nav-intro-tagline -->
+  </section> <!-- #nav-intro -->
+  <div class="nav-secondary-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" title="Exodus Android">
+            <b>Exodus</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="features.html" title="Features Overview" class="active">
+            <b>Features</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="devices.html" title="Supported Devices">
+            <b>Devices</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="download.html" title="Download Exouds">
+            <b>Download</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href=" donate.html" title="Donate to Exodus">
+            <b>Donate</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div> <!-- .nav-secondary-nav -->
       <main class="exodus_content_wrap" role="main">
         <div class="exodus_content_column">
           <div class="exodus_inner_content_column">
@@ -115,6 +128,72 @@
                   <div id='exodus-panel-I53'>
                     <div id='exodus-panel-inner-I53'>
                       <div id="Panel_I53" style="text-align:left; vertical-align:top; margin:0 auto;" >
+                        <div class="collapse-card active">
+                          <div class="collapse-card__heading">
+                            <div class="collapse-card__title" style="">
+                              <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                              <h2 class="over_outline">
+                                <em>Overview</em>
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="collapse-card__body" style="display:block;">
+                            <section class="overview-product">
+                              <div id="overview-product-tour" class="overview-product-mockup">
+                                <img src="img/screenshot_11.png" alt="Preview image">
+                                <ul class="overview-points-container">
+                                  <li class="overview-single-point clearall">
+                                    <a class="overview-img-replace" href="#0">More info</a>
+                                    <div class="overview-more-info overview-left">
+                                      <h2 style="font-size: 90%;">Clear All Button</h2>
+                                      <p style="font-size: 90%;">
+                                      &nbsp;&nbsp;The clear all button has three positions, (Search Bar<i>[Current]</i>, Right, Left). When pressed all the current running apps including ones that don't show in the Overview menu will be realeased from memory.
+                                      </p>
+                                      <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                    </div>
+                                  </li>
+
+                                  <li class="overview-single-point membar">
+                                    <a class="overview-img-replace" href="#0">More info</a>
+                                    <div class="overview-more-info overview-right">
+                                      <h2 style="font-size: 90%;">Memory Bar</h2>
+                                      <p style="font-size: 90%;">
+                                      &nbsp;&nbsp;The memory bar will show the amount of RAM in use on the device out of the total RAM aviable, keep note that the Exodus Firmware and android as a whole does comsume about ~30% of RAM even when nothing is running.
+                                      </p>
+                                      <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                    </div>
+                                  </li>
+                                </ul> <!-- .overview-points-container -->
+                              </div>
+                            </section> <!-- .overview-product -->
+                          </div>
+                        </div>
+<div class="collapse-card active">
+                            <div class="collapse-card__heading">
+                              <div class="collapse-card__title" style="">
+                                <i class="fa fa-question-circle fa-2x fa-fw"></i>
+                                <h2 class="over_outline">
+                                  <em>Best of Exodus</em>
+                                </h2>
+                              </div>
+                            </div>
+                            <div class="collapse-card__body" style="display:block;">
+  <p><strong>Morph Mode:<br></strong>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Allows changing user experience, and configuration settings to match that of another distribution of android.</p>
+                          <p style="color: #524c4c;"><strong>Exodus Updater<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong>Get latest nightly updates as soon as they are built, with automated installation</p>
+                          <p><strong>Optimization<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong><span>Optimized</span><span> and tuned for greatest performance, battery life, and stability with Java 8, and backend improvements done to&nbsp;professional standards<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Kernel Improvements on the most popular supported devices</p>
+                          <p><span style="color: #524c4c;"><strong>Overview Options<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Toggle the Google search bar<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Memory bar showing the amount of used RAM<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Clear all button that can be placed to the bottom right, left, or next to the search bar</p>
+                          <p><span style="color: #524c4c;"><strong>Navigation Bar Configuration<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Edit navigation bar targets with up tap, long press, and double tap commands<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Add Extra layouts<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Color navigation bar targets<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Configure up to 3 navigation ring targets</p>
+                          <p><span style="color: #524c4c;"><strong>Power Menu Options<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Toggle eight power menu targets</p>
+                          <p><span style="color: #524c4c;"><strong>System Animation<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Tune Speed and custom animations for transitions based off of AOKP's Animations</p>
+                          <p><span style="color: #524c4c;"><strong>CyanogenMod's Theme Engine<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Full<span> CMTE support with many themes actively supporting Exodus and custom themes being made every day</span></p>
+                          <p><span style="color: #524c4c;"><strong>All of CyanogenMod Features and Options<br>&nbsp; &nbsp; &nbsp;&nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Using Cyanogenmod's Open Source code allows us to give the users all the settings they are used to, with our new features and improvements on their features.<br><br></p>
+                            </div>
+                          </div>
+                        <script>
+                          $(function () {
+                            $('.collapse-card').paperCollapse()
+                          })
+                        </script>
 
                         <div class="collapse-card active">
                           <div class="collapse-card__heading">
@@ -143,95 +222,70 @@
                             </div>
                           </div>
                           <div class="collapse-card__body" style="display:block;">
-                            <div id="I990165e20e934170b73f615f668ad52c" style="display:block;clear: both;margin:0 0 0 0;" class="Gallery_Default">
+                            <div id="gallery" style="display:block;clear: both;margin:0 0 0 0;" class="Gallery_Default">
                               <div class="exodus_gallery_widget" style="padding:10px;text-align:center;">
                                 <link rel="stylesheet" type="text/css" href="classes/components/Gallery/resources/lightbox/css/lightbox.css" media="screen" />
                                   <div class='round-frame'>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_1.png' title='' style='background-image:url(resources/screenshot-sm_1.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_2.png' title='' style='background-image:url(resources/screenshot-sm_2.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_3.png' title='' style='background-image:url(resources/screenshot-sm_3.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_4.png' title='' style='background-image:url(resources/screenshot-sm_4.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_5.png' title='' style='background-image:url(resources/screenshot-sm_5.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_6.png' title='' style='background-image:url(resources/screenshot-sm_6.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_7.png' title='' style='background-image:url(resources/screenshot-sm_7.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_8.png' title='' style='background-image:url(resources/screenshot-sm_8.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_9.png' title='' style='background-image:url(resources/screenshot-sm_9.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_10.png' title='' style='background-image:url(resources/screenshot-sm_10.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_11.png' title='' style='background-image:url(resources/screenshot-sm_11.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_12.png' title='' style='background-image:url(resources/screenshot-sm_12.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_13.png' title='' style='background-image:url(resources/screenshot-sm_13.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_14.png' title='' style='background-image:url(resources/screenshot-sm_14.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_15.png' title='' style='background-image:url(resources/screenshot-sm_15.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_16.png' title='' style='background-image:url(resources/screenshot-sm_16.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_17.png' title='' style='background-image:url(resources/screenshot-sm_17.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_18.png' title='' style='background-image:url(resources/screenshot-sm_18.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_19.png' title='' style='background-image:url(resources/screenshot-sm_19.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_20.png' title='' style='background-image:url(resources/screenshot-sm_20.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_21.png' title='' style='background-image:url(resources/screenshot-sm_21.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_22.png' title='' style='background-image:url(resources/screenshot-sm_22.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_23.png' title='' style='background-image:url(resources/screenshot-sm_23.png);'></a>
-                                    <a rel='lightbox[gallery_widget_I990165e20e934170b73f615f668ad52c]' href='resources/screenshot_24.png' title='' style='background-image:url(resources/screenshot-sm_24.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_1.png' title='' style='background-image:url(img/screenshot-sm_1.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_2.png' title='' style='background-image:url(img/screenshot-sm_2.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_3.png' title='' style='background-image:url(img/screenshot-sm_3.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_4.png' title='' style='background-image:url(img/screenshot-sm_4.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_5.png' title='' style='background-image:url(img/screenshot-sm_5.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_6.png' title='' style='background-image:url(img/screenshot-sm_6.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_7.png' title='' style='background-image:url(img/screenshot-sm_7.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_8.png' title='' style='background-image:url(img/screenshot-sm_8.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_9.png' title='' style='background-image:url(img/screenshot-sm_9.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_10.png' title='' style='background-image:url(img/screenshot-sm_10.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_11.png' title='' style='background-image:url(img/screenshot-sm_11.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_12.png' title='' style='background-image:url(img/screenshot-sm_12.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_13.png' title='' style='background-image:url(img/screenshot-sm_13.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_14.png' title='' style='background-image:url(img/screenshot-sm_14.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_15.png' title='' style='background-image:url(img/screenshot-sm_15.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_16.png' title='' style='background-image:url(img/screenshot-sm_16.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_17.png' title='' style='background-image:url(img/screenshot-sm_17.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_18.png' title='' style='background-image:url(img/screenshot-sm_18.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_19.png' title='' style='background-image:url(img/screenshot-sm_19.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_20.png' title='' style='background-image:url(img/screenshot-sm_20.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_21.png' title='' style='background-image:url(img/screenshot-sm_21.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_22.png' title='' style='background-image:url(img/screenshot-sm_22.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_23.png' title='' style='background-image:url(img/screenshot-sm_23.png);'></a>
+                                    <a rel='lightbox[gallery_widget]' href='img/screenshot_24.png' title='' style='background-image:url(img/screenshot-sm_24.png);'></a>
                                   </div>
                                   <script type="text/javascript" src="classes/components/Gallery/resources/lightbox/js/lightbox.js"></script>
                                   <script type="text/javascript">
-                                    $(document).ready(function(){ try{ $('div#I990165e20e934170b73f615f668ad52c a').lightBox({locale : ''}); }catch(err){}; });
+                                    $(document).ready(function(){ try{ $('div#gallery a').lightBox({locale : ''}); }catch(err){}; });
                                   </script>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        <div class="collapse-card active">
-                          <div class="collapse-card__heading">
-                            <div class="collapse-card__title" style="">
-                              <i class="fa fa-question-circle fa-2x fa-fw"></i>
-                              <h2 class="over_outline">
-                                <em>Best of Exodus</em>
-                              </h2>
-                            </div>
+                        <div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
+                          <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill solid">
+                            <a href="download.html" >Download Now</a>
                           </div>
-                          <div class="collapse-card__body" style="display:block;">
-<p><strong>Morph Mode:<br></strong>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Allows changing user experience, and configuration settings to match that of another distribution of android.</p>
-                        <p style="color: #524c4c;"><strong>Exodus Updater<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong>Get latest nightly updates as soon as they are built, with automated installation</p>
-                        <p><strong>Optimization<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong><span>Optimized</span><span> and tuned for greatest performance, battery life, and stability with Java 8, and backend improvements done to&nbsp;professional standards<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></span>Kernel Improvements on the most popular supported devices</p>
-                        <p><span style="color: #524c4c;"><strong>Overview Options<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Toggle the Google search bar<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Memory bar showing the amount of used RAM<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Clear all button that can be placed to the bottom right, left, or next to the search bar</p>
-                        <p><span style="color: #524c4c;"><strong>Navigation Bar Configuration<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Edit navigation bar targets with up tap, long press, and double tap commands<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Add Extra layouts<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Color navigation bar targets<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span>Configure up to 3 navigation ring targets</p>
-                        <p><span style="color: #524c4c;"><strong>Power Menu Options<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Toggle eight power menu targets</p>
-                        <p><span style="color: #524c4c;"><strong>System Animation<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Tune Speed and custom animations for transitions based off of AOKP's Animations</p>
-                        <p><span style="color: #524c4c;"><strong>CyanogenMod's Theme Engine<br>&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Full<span> CMTE support with many themes actively supporting Exodus and custom themes being made every day</span></p>
-                        <p><span style="color: #524c4c;"><strong>All of CyanogenMod Features and Options<br>&nbsp; &nbsp; &nbsp;&nbsp;<span style="color: #000000;">► &nbsp;&nbsp;</span></strong></span>Using Cyanogenmod's Open Source code allows us to give the users all the settings they are used to, with our new features and improvements on their features.<br><br></p>
-                          </div>
-                        </div>
-                      <script>
-                        $(function () {
-                          $('.collapse-card').paperCollapse()
-                        })
-                      </script>
-                      <div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
-                        <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
-                          <a href="download.html" >Download Now</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div id="footer" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
-                  <div id='footer-panel'>
-                    <div id='footer-panel-inner'>
-                      <div id="Footer-panel" style="text-align:left; vertical-align:top; margin:0 auto;" >
-                        <div style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
-                          <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
-                            <p style="text-align: center;" class="over_outline">
-                              <br>
-                            </p>
-                            <p style="color: #ffffff; text-align: center;" class="over_outline">&nbsp;
-                              <a href="https://github.com/TeamExodus" style="color: #ffffff;">Source</a>
-                              &nbsp;&nbsp;/&nbsp;&nbsp;
-                              <a href="https://plus.google.com/u/0/communities/106801227383087889476" style="color: #ffffff;">Google+</a>
-                              &nbsp;&nbsp;/&nbsp;&nbsp;
-                              <a href="https://twitter.com/ExodusAndroid" style="color: #ffffff;">Twitter</a>
-                              <br>
-                              <em>© Copyright 2015 Exodus Android</em>
-                            </p>
+                  <div id="footer" style="display:block;clear: both;margin:0 0 0 0;" class="Panel_Default">
+                    <div id='footer-panel'>
+                      <div id='footer-panel-inner'>
+                        <div id="Footer-panel" style="text-align:left; vertical-align:top; margin:0 auto;" >
+                          <div style="display:block;clear: both;margin:0 0 0 0;" class="Text_2_Default">
+                            <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                              <p style="text-align: center;" class="over_outline">
+                                <br>
+                              </p>
+                              <p style="color: #ffffff; text-align: center;" class="over_outline">&nbsp;
+                                <a href="https://github.com/TeamExodus" style="color: #ffffff;">Source</a>
+                                &nbsp;&nbsp;/&nbsp;&nbsp;
+                                <a href="https://plus.google.com/u/0/communities/106801227383087889476" style="color: #ffffff;">Google+</a>
+                                &nbsp;&nbsp;/&nbsp;&nbsp;
+                                <a href="https://twitter.com/ExodusAndroid" style="color: #ffffff;">Twitter</a>
+                                <br>
+                                <em>© Copyright 2015 Exodus Android</em>
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -252,9 +306,6 @@
       </div>
 
       <a class="fab-nav-trigger">Menu<span class="fab-icon"></span></a>
-    </div>
-  </div> <!-- .inner_bg_overlay -->
-</div> <!-- #sys_background / .bg_overlay -->
 <script src="templates/Skyline_v2/resources/js/i18n/en.browserify.build.js"></script>
 </body>
 <!-- Start of Google Analytics -->

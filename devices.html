@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="73uI86EQwkLESNcoqpTTB_RfL8V81HBoYcH_0bUpXi8" />
 
@@ -11,242 +9,113 @@
   <link rel="stylesheet" href="templates/Skyline_v2/resources/css/reset.css">
   <link rel="stylesheet" href="templates/Skyline_v2/resources/css/less.build.css">
 
-  <!--[if lte IE 9]>
-  <script src="templates/Skyline_v2/resources/js/html5shiv.js"></script>
-  <script src="templates/Skyline_v2/resources/js/html5shiv-printshiv.js"></script>
-
-  <![endif]-->
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Supported Devices</title>
   <meta name="description" content="Devices that Team Exodus actively supports." />
   <meta name="keywords" content="" />
   <meta name="author" content="Team Exodus">
-  <link href="resources/icon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="resources/icon.png" rel="icon" type="image/x-icon" />
+  <link href="img/icon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="img/icon.png" rel="icon" type="image/x-icon" />
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <script src='http://ajax.googleapis.com/ajax/libs/webfont/1.4.2/webfont.js' type='text/javascript'></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript">window.jQuery || document.write('<script src="classes/components/bower_components/jquery/dist/jquery.js"><\/script>')</script>
-  <script type="text/javascript" >
-    $(function() {
-      $.get('https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets', function(data) {
-        var lines = data.split("\n");
-        var devices = [""];
-        var devices0 = "";
-        var devices1 = "";
-        for (var i = 0, len = lines.length; i < len; i++) {
-          if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
-              && lines[i] != "") {
-            device = lines[i].replace("exodus_", "");
-            device = device.replace("-userdebug", "");
-            devices[i] = "";
-            if (checkDevice(device)) {
-              devices[i] += "<b>"
-            }
-            var realDevice = deviceRealName(device);
-            devices[i] += '<li>'; 
-            realDevice.forEach(function(entry) {
-              if(typeof entry !== "undefined")
-                devices[i] += entry;
-              else if (i == 0)
-                devices[i] += device;      
-            });
-            devices[i] += '<br /></li>';
-            if (checkDevice(device)) {
-              devices[i] += "</b>"
-            }
-          }
-        }
-
-        devices.sort(function(a, b){
-          if(a.toLowerCase() < b.toLowerCase()) return -1;
-          if(a.toLowerCase() > b.toLowerCase()) return 1;
-          return 0;
-        });
-
-        for (var i = 0, len = devices.length; i < len; i++) {
-          devices1 += devices[i];
-          if (i >= len/2 && devices0 == "") {
-            devices0 = devices1;
-            devices1 = "";
-          }
-        }
-
-        $('#devices0').html(devices0);
-        $('#devices1').html(devices1);
-      });
-    });
-
-    function checkDevice(device) {
-      var uagent = navigator.userAgent.toLowerCase();
-      if (uagent.search(deviceRealName(device)[1].toLowerCase()) > -1)
-        return true;
-
-      return false;
-    }
-
-    function deviceRealName(device) {
-      if (device == "bacon")
-        return ["OnePlus ","One",""];
-      if (device == "d2spr")
-        return ["Samsung ","Galaxy S3"," - Sprint"];
-      if (device == "d850")
-        return ["LG ","G3"," - AT&T"];
-      if (device == "d851")
-        return ["LG ","G3"," - Tmobile"];
-      if (device == "d852")
-        return ["LG ","G3"," - Rogers"];
-      if (device == "d852")
-        return ["LG ","G3"," - Rogers"];
-      if (device == "d855")
-        return ["LG ","G3",""];
-      if (device == "deb")
-        return ["Google ","Nexus 7"," (2013)"];
-      if (device == "flo")
-        return ["Google ","Nexus 7"," (2012)"];
-      if (device == "flounder")
-        return ["Google ","Nexus 9",""];
-      if (device == "f400")
-        return ["LG ","G4",""];
-      if (device == "falcon")
-        return ["Motorola ","Moto G",""];
-      if (device == "find7")
-        return ["Oppo ","Find 7",""];
-      if (device == "hammerhead")
-        return ["Google ","Nexus 5",""];
-      if (device == "hammerheadcaf")
-        return ["Google ","Nexus 5"," CAF"];
-      if (device == "jfltespr")
-        return ["Samsung ","Galaxy S4"," - Sprint"];
-      if (device == "jfltevzw")
-        return ["Samsung ","Galaxy S4"," - Verizon"];
-      if (device == "ls990")
-        return ["LG ","G3"," - Sprint"];
-      if (device == "klte")
-        return ["Samsung ","Galaxy S5",""];
-      if (device == "kltespr")
-        return ["Samsung ","Galaxy S5"," - Sprint"];
-      if (device == "lettuce")
-        return ["YU ","Yuphoria",""];
-      if (device == "m7")
-        return ["HTC ","One M7",""];
-      if (device == "m8")
-        return ["HTC ","One M9",""];
-      if (device == "mako")
-        return ["Google ","Nexus 4",""];
-      if (device == "manta")
-        return ["Google ","Nexus 10",""];
-      if (device == "n7100")
-        return ["Samsung ","Galaxy Note 2",""];
-      if (device == "obake")
-        return ["Motorola ","Droid Turbo",""];
-      if (device == "picassowifi")
-        return ["Samsung ","Galaxy Tab Pro 10.1"," - Wifi"];
-      if (device == "scorpion")
-        return ["Sony ","Xperia Z3 Tablet Compact",""];
-      if (device == "scorpion_windy")
-        return ["Sony ","Xperia Z3 Tablet Compact"," - Wifi"];
-      if (device == "shamu")
-        return ["Google ","Nexus 6",""];
-      if (device == "sprout4")
-        return ["Google ","Android One",""];
-      if (device == "titan")
-        return ["Motorola ","Moto G"," (2014)"];
-      if (device == "tomato")
-        return ["YU ","Yureka",""];
-      if (device == "v500")
-        return ["LG ","G-Pad"," 8.3"];
-      if (device == "ville")
-        return ["HTC ","One S",""];
-      if (device == "vs985")
-        return ["LG ","G3"," - Verizon"];
-      if (device == "xt907")
-        return ["Motorola ","Droid RAZR M",""];
-      if (device == "xt926")
-        return ["Motorola ","Droid RAZR HD",""];
-      if (device == "z3")
-        return ["Sony ","Xperia Z3",""];
-      if (device == "z3c")
-        return ["Sony ","Xperia Z3 Compact",""];
-      return ["",device,""];
-    }
-  </script>
-  <script src="classes/commons/resources/paralax/parallax.js"></script>
-  <link rel="stylesheet" href="classes/commons/resources/cards/paper-collapse.min.css">
-  <script src="classes/commons/resources/cards/paper-collapse.min.js"></script>
-  <link rel="stylesheet" href="classes/commons/resources/fab/fab.css">
-  <script src="classes/commons/resources/fab/velocity.min.js"></script>
-  <script src="classes/commons/resources/fab/fab.js"></script>
+  <script src="js/devices.js"></script>
+  <link rel="stylesheet" href="lib/cards/paper-collapse.min.css">
+  <script src="lib/cards/paper-collapse.min.js"></script>
+  <link rel="stylesheet" href="lib/fab/fab.css">
+  <script src="lib/fab/velocity.min.js"></script>
+  <script src="lib/fab/fab.js"></script>
+  <link rel="stylesheet" href="lib/nav/nav.css">
+  <script src="lib/nav/nav.js"></script>
 </head>
 <body>
-  <div class="exodus_bg_overlay" data-parallax="scroll" data-image-src="resources/wallpaper.jpg">
-    <div class="exodus_inner_bg_overlay">
-      <div class="exodus_outer_content_wrapper">
-        <header role="header">
-          <div class="exodus_outer_heading_wrap">
-            <div class="exodus_heading_container">
-              <div class="exodus_inner_heading_wrap left">
-                <div class="exodus_innermost_heading_wrap">
-                  <nav class="fab-primary-nav-menu">
-                    <ul class="fab-primary-nav">
-                      <li>
-                        <a href="index.html" title="Exodus Android">Exodus</a>
-                      </li>
-                      <li>
-                        <a href="features.html" title="Features Overview">Features</a>
-                      </li>
-                      <li class="selected">
-                        <a href="devices.html" title="Supported Devices">Devices</a>
-                      </li>
-                      <li>
-                        <a href="download.html" title="Download Exouds">Download</a>
-                      </li>
-                      <li>
-                        <a href=" donate.html" title="Donate to Exodus">Donate</a>
-                      </li>
-                    </ul>
-                  </nav>
-                  <div id="exodus_heading_block"> <!--Title / Logo-->
-                    <h1>
-                      <a id="sys_heading" class="exodus_hide_logo" href="index.html">
-                        <img class="exodus_site_logo" src="devices.html" alt=" Supported Devices" >
-                        <span><i>Supported Devices</i></span>
-                      </a>
-                    </h1>
+    <header class="nav-header">
+    <nav class="fab-primary-nav-menu">
+      <ul class="fab-primary-nav">
+        <li>
+          <a href="index.html" title="Exodus Android">Exodus</a>
+        </li>
+        <li>
+          <a href="features.html" title="Features Overview">Features</a>
+        </li>
+        <li class="selected">
+          <a href="devices.html" title="Supported Devices">Devices</a>
+        </li>
+        <li>
+          <a href="download.html" title="Download Exouds">Download</a>
+        </li>
+        <li>
+          <a href=" donate.html" title="Donate to Exodus">Donate</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="exodus_heading_block"> <!--Title / Logo-->
+      <h1>
+        <a id="sys_heading" class="exodus_hide_logo" href="index.html">
+          <img class="exodus_site_logo" src="index.html" alt="" >
+          <span></span>
+        </a>
+      </h1>
+    </div>
+  </header>
+  <section id="nav-intro" style="min-height:200px; height:200px">
+    <div id="nav-intro-tagline"  style="padding-top:25px">
+        <div id="sys_region_1" class="zone_top" >
+        <div id="I3" style="display:block;clear: both;margin:0rem 0rem 0rem 0rem;" class="Panel_Default">
+          <div id='exodus-panel-I3'>
+            <div class="exodus-logo animated fadeInDown">
+              <div id='exodus-panel-inner-I3'>
+                <div id="I4" style="display:block;clear: both;margin:25px 0 0 0;" class="Text_2_Default">
+                  <div systemElement="true" class="sys_txt sys_text_widget new-text-widget" style="margin:0px; padding:0px; color:; font:; background-color:;">
+                    <h2 style="text-align: center;font-size:2.3rem;" class="over_outline">
+                      <em>Supported Devices</em>
+                    </h2>
                   </div>
-                  <div id="exodus_nav_block"> <!--Nav-->
-                    <nav role="navigation">
-                      <div class="sys_navigation">
-                        <ul class="sys_navigation">
-                          <li id="ys_menu_0">
-                            <a href="index.html" title="Exodus Android">Exodus</a>
-                          </li>
-                          <li id="ys_menu_1">
-                            <a href="features.html" title="Features Overview">Features</a>
-                          </li>
-                          <li id="ys_menu_2" class="selected">
-                            <a href="devices.html" title="Supported Devices">Devices</a>
-                          </li>
-                          <li id="ys_menu_3">
-                            <a href="download.html" title="Download Exouds">Download</a>
-                          </li>
-                          <!--li id="ys_menu_3">
-                            <a href="http://www.google.com" target="_blank" title="Bug Report">Bug Report</a>
-                          </li-->
-                          <li id="ys_menu_4">
-                            <a href=" donate.html" title="Donate to Exodus">Donate</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </nav>
-                  </div>
-                  <div style="padding:0; height:0; clear:both;"> </div>
                 </div>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </div> <!-- #nav-intro-tagline -->
+  </section> <!-- #nav-intro -->
+  <div class="nav-secondary-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" title="Exodus Android">
+            <b>Exodus</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="features.html" title="Features Overview">
+            <b>Features</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="devices.html" title="Supported Devices" class="active">
+            <b>Devices</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href="download.html" title="Download Exouds">
+            <b>Download</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+        <li>
+          <a href=" donate.html" title="Donate to Exodus">
+            <b>Donate</b>
+            <span></span><!-- icon -->
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div> <!-- .nav-secondary-nav -->
         <main class="exodus_content_wrap" role="main">
           <div class="exodus_content_column">
             <div class="exodus_inner_content_column">
@@ -269,12 +138,12 @@
                                 <div id="I43" style="display:block;clear: both;margin:10 0 0 0;" class="Layout1_Default">
                                   <div class="column column_divider" >
                                     <div id="Left_I43" class="left" >
-                                      <div id="I44" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
+                                      <div id="I44" style="display:block;clear: both;text-align:left;margin:0 0 0 0;padding-left: 3.5rem;">
                                         <div id="devices0">Loading device list...</div>
                                       </div>
                                     </div>
                                     <div id="Right_I43" class="right" >
-                                      <div id="I45" style="display:block;clear: both;text-align:center;margin:0 0 0 0;">
+                                      <div id="I45" style="display:block;clear: both;text-align:left;margin:0 0 0 0;padding-left: 3.5rem;">
                                         <div id="devices1"></div>
                                       </div>
                                     </div>
@@ -289,11 +158,7 @@
                             </div>
                           </div>
                         </div>
-                      <div id="I9903ef269ade4782eff96e94a06d2cb7" style="display:block;clear: both;margin:50px 0 0 0;" class="Button_Default">
-                        <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill outline">
-                          <a href="download.html" >Download Now</a>
-                        </div>
-                      </div>
+                     
                     </div>
                   </div>
                 </div>
@@ -337,9 +202,6 @@
 </div>
 
 <a class="fab-nav-trigger">Menu<span class="fab-icon"></span></a>
-</div>
-</div> <!-- .inner_bg_overlay -->
-</div> <!-- #sys_background / .bg_overlay -->
 <script src="templates/Skyline_v2/resources/js/i18n/en.browserify.build.js"></script>
 </body>
 <!-- Start of Google Analytics -->
