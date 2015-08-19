@@ -148,12 +148,36 @@ Main components
   animation: overview-pulse 2s infinite;
 }
 .overview-single-point.clearall {
-  top: 3%;
+  top: 8.2%;
   right: 1.3%;
 }
 .overview-single-point.membar {
-  top: 13%;
-  left: 32%;
+  top: 11%;
+  left: 2%;
+}
+.overview-single-point.adblock {
+  top: 35%;
+  right: 4%;
+}
+.overview-single-point.selinux {
+  top: 52.5%;
+  right: 4%;
+}
+.overview-single-point.updater {
+  top: 82%;
+  right: 4%;
+}
+.overview-single-point.logic {
+  top: 32.8%;
+  left: 7%;
+}
+.overview-single-point.theme {
+  top: 48%;
+  right: 4%;
+}
+.overview-single-point.control {
+  top: 57.5%;
+  right: 4%;
 }
 .overview-single-point.is-open > a {
   background-color: #685f99;
@@ -180,9 +204,6 @@ Main components
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
   -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
-}
-.overview-single-point.visited > a {
-  background-color: #685f99;
 }
 .overview-single-point.visited::after {
   /* pulse effect no more active on visited elements */
@@ -305,8 +326,8 @@ Main components
 }
 .overview-single-point .overview-more-info {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 3.4%;
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -326,6 +347,14 @@ Main components
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
   -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  position: absolute;
+  width: 180px;
+  height: 240px;
+  padding: 1em;
+  overflow-y: visible;
+  line-height: 1.4;
+  border-radius: .25em;
+  box-shadow: 0 0 20px rgba(61, 56, 90, 0.3);
 }
 .overview-single-point .overview-more-info::before {
   /* triangle next to the interest point description - hidden on mobile */
@@ -356,6 +385,7 @@ Main components
     border-radius: .25em;
     box-shadow: 0 0 20px rgba(61, 56, 90, 0.3);
   }
+}
   .overview-single-point .overview-more-info::before {
     display: block;
   }
@@ -431,7 +461,6 @@ Main components
   .overview-single-point .overview-more-info p {
     font-size: 1.3rem;
   }
-}
 
 .overview-close-info {
   /* close the interest point description - only on mobile */

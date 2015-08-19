@@ -19,8 +19,8 @@
   <link type="text/css" rel="stylesheet" href="css/style.css">        
   <script src='http://ajax.googleapis.com/ajax/libs/webfont/1.4.2/webfont.js' type='text/javascript'></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript">window.jQuery || document.write('<script src="classes/components/bower_components/jquery/dist/jquery.js"><\/script>')</script>
-  <link rel="stylesheet" type="text/css" href="classes/components/Gallery/layouts/Default/Default.css" />
+  <script type="text/javascript">window.jQuery || document.write('<script src="lib/jquery/jquery.js"><\/script>')</script>
+  <link rel="stylesheet" type="text/css" href="lib/gallery/gallery.css" />
   <link rel="stylesheet" href="lib/cards/paper-collapse.min.css">
   <script src="lib/cards/paper-collapse.min.js"></script>
   <link rel="stylesheet" href="lib/fab/fab.css">
@@ -30,6 +30,8 @@
   <script src="lib/nav/nav.js"></script>
   <link rel="stylesheet" href="lib/overview/overview.css">
   <script src="lib/overview/overview.js"></script>
+  <script src="lib/slider/bxslider.js"></script>
+  <link href="lib/slider/bxslider.css" rel="stylesheet" />
 </head>
 <body>
   <header class="nav-header">
@@ -138,34 +140,122 @@
                             </div>
                           </div>
                           <div class="collapse-card__body" style="display:block;">
-                            <section class="overview-product">
-                              <div id="overview-product-tour" class="overview-product-mockup">
-                                <img src="img/screenshot_11.png" alt="Preview image">
-                                <ul class="overview-points-container">
-                                  <li class="overview-single-point clearall">
-                                    <a class="overview-img-replace" href="#0">More info</a>
-                                    <div class="overview-more-info overview-left">
-                                      <h2 style="font-size: 90%;">Clear All Button</h2>
-                                      <p style="font-size: 90%;">
-                                      &nbsp;&nbsp;The clear all button has three positions, (Search Bar<i>[Current]</i>, Right, Left). When pressed all the current running apps including ones that don't show in the Overview menu will be realeased from memory.
-                                      </p>
-                                      <a href="#0" class="overview-close-info overview-img-replace">Close</a>
-                                    </div>
-                                  </li>
+                            <ul class="bxslider" style="height: 20%;">
+                              <li>
+                                <section class="overview-product" style="padding-top:60px;">
+                                  <div id="overview-product-tour" class="overview-product-mockup">
+                                    <img src="img/screenshot_11.png" alt="Preview image">
+                                    <ul class="overview-points-container">
+                                      <li class="overview-single-point clearall">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">Clear All Button</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;The clear all button has three positions, (Search Bar<i>[Current]</i>, Right, Left). When pressed all the current running apps including ones that don't show in the Overview menu will be realeased from memory.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
 
-                                  <li class="overview-single-point membar">
-                                    <a class="overview-img-replace" href="#0">More info</a>
-                                    <div class="overview-more-info overview-right">
-                                      <h2 style="font-size: 90%;">Memory Bar</h2>
-                                      <p style="font-size: 90%;">
-                                      &nbsp;&nbsp;The memory bar will show the amount of RAM in use on the device out of the total RAM aviable, keep note that the Exodus Firmware and android as a whole does comsume about ~30% of RAM even when nothing is running.
-                                      </p>
-                                      <a href="#0" class="overview-close-info overview-img-replace">Close</a>
-                                    </div>
-                                  </li>
-                                </ul> <!-- .overview-points-container -->
-                              </div>
-                            </section> <!-- .overview-product -->
+                                      <li class="overview-single-point membar">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-right">
+                                          <h2 style="font-size: 90%;">Memory Bar</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;The memory bar will show the amount of RAM in use on the device out of the total RAM aviable, keep note that the Exodus Firmware and android as a whole does comsume about ~30% of RAM even when nothing is running.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                    </ul> <!-- .overview-points-container -->
+                                  </div>
+                                </section> <!-- .overview-product -->
+                              </li>
+                              <li>
+                                <section class="overview-product" style="padding-top:60px;">
+                                  <div id="overview-product-tour" class="overview-product-mockup">
+                                    <img src="img/screenshot_7.png" alt="Preview image">
+                                    <ul class="overview-points-container">
+                                      <li class="overview-single-point adblock">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">AdBlock</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Built in Ad-Block to prevent malicous ads and unwanted content from appearing on the web and in apps a like.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+
+                                      <li class="overview-single-point selinux">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">SE Linux</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Enable or disable SE Linux to allow for more customablity with apps like Viper4Android, or to keep your device more secure from malware.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                      <li class="overview-single-point updater">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">Exodus Updater</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Built in nightly updater that will notify you of updates, let you download them, and automaticly install them with just a few short taps.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                    </ul> <!-- .overview-points-container -->
+                                  </div>
+                                </section> <!-- .overview-product -->
+                              </li>
+                              <li>
+                                <section class="overview-product" style="padding-top:60px;">
+                                  <div id="overview-product-tour" class="overview-product-mockup">
+                                    <img src="img/screenshot_2.png" alt="Preview image">
+                                    <ul class="overview-points-container">
+                                      <li class="overview-single-point logic">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-right">
+                                          <h2 style="font-size: 90%;">Logicly Organized</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Exodus Android's Settings menu has been reorganized from the ground up to help the user find the setting they are looking for easily and logicly in a place where they would expect it, while also making new features easy to find.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                      <li class="overview-single-point theme">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">Cyanogen Theme Support</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Full support for the millions of CM12.1 themes that exist on XDA and the Play Store
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                      <li class="overview-single-point control">
+                                        <a class="overview-img-replace" href="#0">More info</a>
+                                        <div class="overview-more-info overview-left">
+                                          <h2 style="font-size: 90%;">Advanced Rom Controls</h2>
+                                          <p style="font-size: 90%;">
+                                          &nbsp;&nbsp;Advanced ROM Controls that include but are not limited to: AdBlock, SELinux, Exodus Updater, LCD Density, System App Remover, Super SU.
+                                          </p>
+                                          <a href="#0" class="overview-close-info overview-img-replace">Close</a>
+                                        </div>
+                                      </li>
+                                    </ul> <!-- .overview-points-container -->
+                                  </div>
+                                </section> <!-- .overview-product -->
+                              </li>
+                            </ul>
+                            <script>
+                              $(document).ready(function(){
+                                $('.bxslider').bxSlider();
+                              });
+                            </script>
                           </div>
                         </div>
 <div class="collapse-card active">
@@ -224,7 +314,7 @@
                           <div class="collapse-card__body" style="display:block;">
                             <div id="gallery" style="display:block;clear: both;margin:0 0 0 0;" class="Gallery_Default">
                               <div class="exodus_gallery_widget" style="padding:10px;text-align:center;">
-                                <link rel="stylesheet" type="text/css" href="classes/components/Gallery/resources/lightbox/css/lightbox.css" media="screen" />
+                                <link rel="stylesheet" type="text/css" href="lib/lightbox/lightbox.css" media="screen" />
                                   <div class='round-frame'>
                                     <a rel='lightbox[gallery_widget]' href='img/screenshot_1.png' title='' style='background-image:url(img/screenshot-sm_1.png);'></a>
                                     <a rel='lightbox[gallery_widget]' href='img/screenshot_2.png' title='' style='background-image:url(img/screenshot-sm_2.png);'></a>
@@ -251,7 +341,7 @@
                                     <a rel='lightbox[gallery_widget]' href='img/screenshot_23.png' title='' style='background-image:url(img/screenshot-sm_23.png);'></a>
                                     <a rel='lightbox[gallery_widget]' href='img/screenshot_24.png' title='' style='background-image:url(img/screenshot-sm_24.png);'></a>
                                   </div>
-                                  <script type="text/javascript" src="classes/components/Gallery/resources/lightbox/js/lightbox.js"></script>
+                                  <script type="text/javascript" src="lib/lightbox/lightbox.js"></script>
                                   <script type="text/javascript">
                                     $(document).ready(function(){ try{ $('div#gallery a').lightBox({locale : ''}); }catch(err){}; });
                                   </script>

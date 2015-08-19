@@ -160,7 +160,7 @@ Intro
 #nav-intro {
   position: relative;
   height: 300px;
-  background: url(../../img/wallpaper.jpg) no-repeat center center fixed;
+  background: url(wallpaper.jpg) no-repeat center center fixed;
   min-height: 500px;
   z-index: 2;
 }
@@ -338,7 +338,7 @@ Secondary Fixed Navigation
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     background-repeat: no-repeat;
-    background-image: url(../../img/nav-icons.svg);
+    background-image: url(nav-icons.svg);
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;

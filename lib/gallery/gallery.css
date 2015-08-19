@@ -22,7 +22,7 @@
         width:124px;
         height:128px;
         margin:0 10px 20px 10px;
-        background:url('../../resources/polaroid.png') top left no-repeat;
+        background:url('polaroid.png') top left no-repeat;
         text-align:left;
     }
 
@@ -123,7 +123,7 @@
         width:130px;
         height:130px;
         margin:0 7px 15px 7px;
-        background:url('../../resources/round-frame.png') top left no-repeat;
+        background:url('round-frame.png') top left no-repeat;
         text-align:left;
     }
 
@@ -165,8 +165,8 @@
     }
 
     div.exodus_gallery_widget div.round-corners span.item span.round-corners-shadow{
-        background:url('../../resources/round-frame-shadow.png') top left no-repeat;
-        _behavior: url('../../resources/iepngfix.htc');
+        background:url('round-frame-shadow.png') top left no-repeat;
+        _behavior: url('iepngfix.htc');
         display:inline-block;
         width:100px;
         height:100px;

@@ -948,4 +948,8 @@ div.sys_text_widget img{margin:4px;}
   width: 100%;
   border: 0;
 }
+.Image_Default img {
+  max-width: 100%;
+  height: auto;
+}
 
