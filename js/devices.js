@@ -1,57 +1,112 @@
-$(function() {
-  $.get('https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets', function(data) {
-    var lines = data.split("\n");
-    var devices = [""];
-    var devices0 = "";
-    var devices1 = "";
-    for (var i = 0, len = lines.length; i < len; i++) {
-      if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
-          && lines[i] != "") {
-        device = lines[i].replace("exodus_", "");
-        device = device.replace("-userdebug", "");
-        devices[i] = "";
-        if (checkDevice(device)) {
-          devices[i] += "<b>"
-        }
-        var realDevice = deviceRealName(device);
-        devices[i] += '<li>'; 
-        realDevice.forEach(function(entry) {
-          if(typeof entry !== "undefined")
-            devices[i] += entry;
-          else if (i == 0)
-            devices[i] += device;      
-        });
-        devices[i] += '<br /></li>';
-        if (checkDevice(device)) {
-          devices[i] += "</b>"
+function loadSupportedDevices() {
+  var devices = getDevices(true, true);
+  var devices0 = "";
+  var devices1 = "";
+
+  for (var i = 0, len = devices.length; i < len; i++) {
+    devices1 += devices[i];
+    if (i >= len/2 && devices0 == "") {
+      devices0 = devices1;
+      devices1 = "";
+    }
+  }
+
+  $('#devices0').html(devices0);
+  $('#devices1').html(devices1);
+};
+
+function loadDevicesList() {
+  var devices = getDevices(false, true);
+  var codename = getDevices(false, false);
+
+  for (var i = 0, len = devices.length; i < len; i++) {
+    var option = document.createElement("option");
+    var value = "";
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() + 1;
+    if (month < 10)
+      month = '0' + month;
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+    newdate = year + month + day-1;
+    value ='http://exodus-developers.net/exodus-5.1/'
+    + codename[i] + '/exodus-5.1-' + newdate +'-NIGHTLY-'
+    + codename[i] +'.zip';
+
+    if (checkDevice(codename[i])) {
+      $('#devices').prepend("<option value='"+ value +"'>" + devices[i] +"</option>");
+      $('#devices').val(value);
+      DownloadBtn.href=value;
+    } else {
+      $('#devices').append("<option value='"+ value +"'>" + devices[i] +"</option>");
+    }
+  }
+}
+
+
+function getDevices(htmlEnabled, realNames, sorting) {
+  var devices = new Array();
+  $.ajax({
+    url: 'https://raw.githubusercontent.com/TeamExodus/vendor_exodus_devices/EXODUS-5.1/exodus-build-targets',
+    type: 'get',
+    dataType: 'html',
+    async: false,
+    success: function(data) {
+      var lines = data.split("\n");
+      for (var i = 0, len = lines.length; i < len; i++) {
+        if (lines[i] != "#supported devices" && lines[i] != "#end of supported devices"
+            && lines[i] != "") {
+          device = lines[i].replace("exodus_", "");
+          device = device.replace("-userdebug", "");
+          devices[i] = "";
+          if (htmlEnabled) {
+            if (checkDevice(device)) {
+              devices[i] += "<b>"
+            }
+            devices[i] += '<li>';
+          }
+          var currentDevice = deviceCodeNameSorted(device);
+          if (realNames)
+            currentDevice = deviceRealName(device); 
+          currentDevice.forEach(function(entry) {
+            if(typeof entry != "undefined")
+              devices[i] += entry;
+            else if (i == 0)
+              devices[i] += device;      
+          });
+          if (htmlEnabled) {
+            devices[i] += '<br /></li>';
+            if (checkDevice(device)) {
+              devices[i] += "</b>"
+            }
+          }
         }
       }
     }
-
-    devices.sort(function(a, b){
-      if(a.toLowerCase() < b.toLowerCase()) return -1;
-      if(a.toLowerCase() > b.toLowerCase()) return 1;
-      return 0;
-    });
-
-    for (var i = 0, len = devices.length; i < len; i++) {
-      devices1 += devices[i];
-      if (i >= len/2 && devices0 == "") {
-        devices0 = devices1;
-        devices1 = "";
-      }
-    }
-
-    $('#devices0').html(devices0);
-    $('#devices1').html(devices1);
   });
-});
+  devices.sort(function(a, b){
+    if(a.toLowerCase() < b.toLowerCase()) return -1;
+    if(a.toLowerCase() > b.toLowerCase()) return 1;
+    return 0;
+  });
+  devices.pop();
+
+  if (!realNames) {
+    for (var i = 0, len = devices.length; i < len; i++) {
+      if (devices[i][0] == Math.floor(i/10)+1) {
+        fixed=devices[i].toString().substring(3);
+        devices[i] = fixed;
+      }
+    }
+  }
+
+  return devices;
+}
 
 function checkDevice(device) {
   var uagent = navigator.userAgent.toLowerCase();
   if (uagent.search(deviceRealName(device)[1].toLowerCase()) > -1)
     return true;
-
   return false;
 }
 
@@ -63,9 +118,7 @@ function deviceRealName(device) {
   if (device == "d850")
     return ["LG ","G3"," - AT&T"];
   if (device == "d851")
-    return ["LG ","G3"," - Tmobile"];
-  if (device == "d852")
-    return ["LG ","G3"," - Rogers"];
+    return ["LG ","G3"," - T Mobile"];
   if (device == "d852")
     return ["LG ","G3"," - Rogers"];
   if (device == "d855")
@@ -139,4 +192,87 @@ function deviceRealName(device) {
   if (device == "z3c")
     return ["Sony ","Xperia Z3 Compact",""];
   return ["",device,""];
+}
+function deviceCodeNameSorted(device) {
+  if (device == "bacon")
+    return ["35 ",device,""];
+  if (device == "d2spr")
+    return ["38 ",device,""];
+  if (device == "d850")
+    return ["24 ",device,""];
+  if (device == "d851")
+    return ["27 ",device,""];
+  if (device == "d852")
+    return ["25 ",device,""];
+  if (device == "d855")
+    return ["23 ",device,""];
+  if (device == "deb")
+    return ["17 ",device,""];
+  if (device == "flo")
+    return ["16 ",device,""];
+  if (device == "flounder")
+    return ["18 ",device,""];
+  if (device == "f400")
+    return ["29 ",device,""];
+  if (device == "falcon")
+    return ["33 ",device,""];
+  if (device == "find7")
+    return ["36 ",device,""];
+  if (device == "hammerhead")
+    return ["13 ",device,""];
+  if (device == "hammerheadcaf")
+    return ["14 ",device,""];
+  if (device == "jfltespr")
+    return ["39 ",device,""];
+  if (device == "jfltevzw")
+    return ["40 ",device,""];
+  if (device == "ls990")
+    return ["26 ",device,""];
+  if (device == "klte")
+    return ["41 ",device,""];
+  if (device == "kltespr")
+    return ["42 ",device,""];
+  if (device == "lettuce")
+    return ["48 ",device,""];
+  if (device == "m7")
+    return ["19 ",device,""];
+  if (device == "m8")
+    return ["20 ",device,""];
+  if (device == "mako")
+    return ["12 ",device,""];
+  if (device == "manta")
+    return ["11 ",device,""];
+  if (device == "n7100")
+    return ["37 ",device,""];
+  if (device == "obake")
+    return ["32 ",device,""];
+  if (device == "picassowifi")
+    return ["43 ",device,""];
+  if (device == "scorpion")
+    return ["46 ",device,""];
+  if (device == "scorpion_windy")
+    return ["47 ",device,""];
+  if (device == "shamu")
+    return ["15 ",device,""];
+  if (device == "sprout4")
+    return ["10 ",device,""];
+  if (device == "titan")
+    return ["34 ",device,""];
+  if (device == "tomato")
+    return ["49 ",device,""];
+  if (device == "v500")
+    return ["22 ",device,""];
+  if (device == "ville")
+    return ["21 ",device,""];
+  if (device == "vs985")
+    return ["28 ",device,""];
+  if (device == "xt907")
+    return ["31 ",device,""];
+  if (device == "xt926")
+    return ["30 ",device,""];
+  if (device == "z3")
+    return ["44 ",device,""];
+  if (device == "z3c")
+    return ["45 ",device,""];
+  return ["99",device,""];
 }
