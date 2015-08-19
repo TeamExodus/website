@@ -21,6 +21,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  margin: 0;
+}
+
 /* -------------------------------- 
 
 Modules - reusable parts of our design
@@ -160,7 +164,6 @@ Intro
 #nav-intro {
   position: relative;
   height: 300px;
-  background: url(wallpaper.jpg) no-repeat center center fixed;
   min-height: 500px;
   z-index: 2;
 }
