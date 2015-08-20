@@ -167,23 +167,34 @@
                             </div>
                           </div>
                           <div align="center">
-                            <select id="devices"onChange="DownloadBtn.href=this.value">
+                            <select id="devices"onChange="DownloadBtn.href=this.value; MD5Btn.href=this.value+'.md5'">
                               <option value="http://exodus-developers.net">Select a device...</option>
                             </select>
                           </div>
                           <div style="display:block;clear: both;" class="Layout1_Default">
                             <div class="column column_divider" >
-                              <div id="Left" class="left" >
+                              <div id="Left" class="leftwc" >
                                 <div style="display:block;clear: both;margin:40px 0 0 0;" class="Button_Default">
                                   <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button blue pill solid">
                                     <a id="GoogleBtn" href="http://fitsnugly.euroskank.com/dl.php?file=banks/gapps/BaNkS-dynamic-gapps-5.x.x-8-18-15.zip" >Google Apps</a>
                                   </div>
                                 </div>
                               </div>
-                              <div id="Right" class="right" >
-                                <div style="display:block;clear: both;margin:40px 0 50px 0;" class="Button_Default">
+
+                              <div id="Center" class="center" >
+                                <div style="display:block;clear: both;margin:40px 0 0 0;" class="Button_Default">
                                   <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button green pill solid">
-                                    <a id="DownloadBtn" href="http://exodus-developers.net">Accept and Download</a>
+                                    <a id="DownloadBtn" onclick="return checkDeviceLink();" href="http://exodus-developers.net/exodus-5.1">Accept and Download</a>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+                              <div id="Right" class="rightwc" >
+                                <div style="display:block;clear: both;margin:40px 0 30px 0;" class="Button_Default">
+                                  <div id="center_sys_button" systemElement="true" class="center_sys_button sys_button red pill solid">
+                                    <a id="MD5Btn" onclick="return checkDeviceLink();">MD5</a>
                                   </div>
                                 </div>
                               </div>
@@ -264,11 +275,14 @@
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 
-  $('#DownloadBtn').on('click', function() {
-    ga('send', 'event', 'DownloadBtn', 'click', 'download', 1);
-  });
   $('#GoogleBtn').on('click', function() {
-    ga('send', 'event', 'GoogleBtn', 'click', 'download', 2);
+    ga('send', 'event', 'GoogleBtn', 'click', 'google', 1);
+  });
+  $('#DownloadBtn').on('click', function() {
+    ga('send', 'event', 'DownloadBtn', 'click', 'exodus', 2);
+  });
+  $('#MD5Btn').on('click', function() {
+    ga('send', 'event', 'MD5Btn', 'click', 'md5', 3);
   });
 </script>
 <!-- End of Google Analytics -->

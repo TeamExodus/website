@@ -360,6 +360,12 @@ div[id*='sys_region_'] {
     padding-right: 0;
   }
 
+  body .column_divider .leftwc, body .column_divider .rightwc, body .column_divider .center {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .exodus_outer_content_wrapper {
     display: block;
   }
@@ -642,17 +648,10 @@ div#heading h1 a {
 
 .sys_button.green a,
 .sys_button.green a:link,
-.sys_button.green a:visited {
-  font-family: 'Roboto';
-  font-weight: 900;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding-top:0.9rem;
-  padding-bottom:0.9rem;
-  padding-left:2.2rem;
-  padding-right:2.2rem;
-}
-
+.sys_button.green a:visited,
+.sys_button.red a,
+.sys_button.red a:link,
+.sys_button.red a:visited,
 .sys_button.blue a,
 .sys_button.blue a:link,
 .sys_button.blue a:visited {
@@ -722,6 +721,36 @@ div#heading h1 a {
 
 .sys_button.green.outline a:hover {
   background-color: rgba(0,154,3,1.00);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*button styles:red*/
+.sys_button.red.outline a, .sys_button.red.outline a:link {
+  border-color:rgba(248,6,21,1.00);
+  color: rgba(248,154,3,1.00);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.sys_button.red.outline a:visited {
+  color: rgba(248,6,21,1.00);
+}
+
+.sys_button.red.solid a, .sys_button.red.solid a:link {
+  background-color: #f80615;
+  color: #ffffff;
+  border-color:rgba(248,6,21,1.00);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.sys_button.red.solid a:visited {
+  color: #ffffff;
+}
+
+.sys_button.red.outline a:hover {
+  background-color: rgba(248,6,21,1.00);
   color: #ffffff;
   text-decoration: none;
 }
@@ -914,6 +943,39 @@ div.sys_text_widget img{margin:4px;}
 .column .right {
   vertical-align: top;
   width: 50%;
+  padding: 0 20px 0 0;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.column .leftwc {
+  text-align: left;
+  vertical-align: top;
+  width: 33%;
+  padding: 0 0 0 20px;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:border-box;
+}
+
+.column .center {
+  text-align: left;
+  vertical-align: top;
+  width: 34%;
+  padding: 0 20px 0 20px;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:border-box;
+}
+
+.column .rightwc {
+  vertical-align: top;
+  width: 33%;
   padding: 0 20px 0 0;
   float: left;
   -moz-box-sizing: border-box;

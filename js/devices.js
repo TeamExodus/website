@@ -31,12 +31,13 @@ function loadDevicesList() {
     newdate = year + month + day-1;
     value ='http://exodus-developers.net/exodus-5.1/'
     + codename[i] + '/exodus-5.1-' + newdate +'-NIGHTLY-'
-    + codename[i] +'.zip';
+    + codename[i] + '.zip';
 
     if (checkDevice(codename[i])) {
       $('#devices').prepend("<option value='"+ value +"'>" + devices[i] +"</option>");
       $('#devices').val(value);
-      DownloadBtn.href=value;
+      DownloadBtn.href= value;
+      MD5Btn.href= value +'.md5';
     } else {
       $('#devices').append("<option value='"+ value +"'>" + devices[i] +"</option>");
     }
@@ -275,4 +276,12 @@ function deviceCodeNameSorted(device) {
   if (device == "z3c")
     return ["45 ",device,""];
   return ["99",device,""];
+}
+
+function checkDeviceLink() {
+  if (devices.value == "http://exodus-developers.net") {
+    alert("Please select a device...");
+    return false;
+  }
+  return true;
 }
