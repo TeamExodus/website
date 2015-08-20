@@ -34,7 +34,7 @@ function loadDevicesList() {
     + codename[i] + '.zip';
 
     if (checkDevice(codename[i])) {
-      $('#devices').prepend("<option value='"+ value +"'>" + devices[i] +" - "+ codename[i] + "</option>");
+      $('#devices').append("<option value='"+ value +"'>" + devices[i] +" - "+ codename[i] + "</option>");
       $('#devices').val(value);
       DownloadBtn.href= value;
       MD5Btn.href= value +'.md5';
