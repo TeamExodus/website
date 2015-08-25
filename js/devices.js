@@ -86,16 +86,20 @@ function getDevices(htmlEnabled, realNames, sorting) {
     }
   });
   devices.sort(function(a, b){
-    if(a.toLowerCase() < b.toLowerCase()) return -1;
-    if(a.toLowerCase() > b.toLowerCase()) return 1;
+    if(a < b) return -1;
+    if(a > b) return 1;
     return 0;
   });
   devices.pop();
 
   if (!realNames) {
     for (var i = 0, len = devices.length; i < len; i++) {
-      if (devices[i][0] == Math.floor(i/10)+1) {
+      if ((devices[i][0] == Math.floor(i / 10) + 1)) {
         fixed=devices[i].toString().substring(3);
+        devices[i] = fixed;
+      }
+      if (devices[i][0] == "9") {
+        fixed = devices[i].toString().substring(4);
         devices[i] = fixed;
       }
     }
@@ -275,7 +279,7 @@ function deviceCodeNameSorted(device) {
     return ["44 ",device,""];
   if (device == "z3c")
     return ["45 ",device,""];
-  return ["99",device,""];
+  return ["999 ",device,""];
 }
 
 function checkDeviceLink() {
