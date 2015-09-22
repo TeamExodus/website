@@ -131,7 +131,7 @@ function loadDownloadList(devices) {
         }
         var year = dateObj.getUTCFullYear();
         newdate = year + month + day - rewind;
-        value ='http://exodus-developers.net/exodus-5.1/'
+        value ='http://downloads.exodus-developers.net/exodus-5.1/'
         + codename + '/exodus-5.1-' + newdate +'-NIGHTLY-'
         + codename + '.zip';
 
@@ -151,7 +151,7 @@ function loadDownloadList(devices) {
 }
 
 function checkDeviceLink() {
-  if (devices.value == "http://exodus-developers.net") {
+  if (devices.value == "http://downloads.exodus-developers.net") {
     alert("Please select a device...");
     return false;
   }
